@@ -1,0 +1,41 @@
+{
+  "name": "thinkful-workshop-full-stack-webpack2",
+  "version": "0.0.1",
+  "description": "Thinkful workshop for help student work with a full stack project",
+  "main": "index.js",
+  "author": "EQuimper <quimperemanuel@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "validator": "^6.2.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "eslint-config-rallycoding": "^3.2.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "html-webpack-plugin": "^2.26.0",
+    "morgan": "^1.7.0",
+    "rimraf": "^2.5.4",
+    "webpack": "2.2",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

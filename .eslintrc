@@ -1,0 +1,19 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": "rallycoding",
+  "rules": {
+    "global-require": 0,
+    "no-underscore-dangle": 0,
+    "arrow-body-style": 0,
+    "no-shadow": 0,
+    "import/no-extraneous-dependencies": 0,
+    "no-return-assign": 0,
+    "generator-star-spacing": 0
+  },
+  "globals": {
+    "describe": false,
+    "it": false
+  }
+}
