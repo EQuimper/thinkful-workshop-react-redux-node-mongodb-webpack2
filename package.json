@@ -6,6 +6,8 @@
   "author": "EQuimper <quimperemanuel@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "cross-env NODE_ENV=production yarn run clean && webpack -p",
+    "clean": "rimraf dist npm-debug.log.*",
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
