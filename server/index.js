@@ -18,7 +18,6 @@ if (process.env.NODE_ENV !== 'production') {
   */
   mongoConf = 'mongodb://localhost/myblog';
 } else {
-  console.log('hello');
   app.use(express.static('dist'));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));

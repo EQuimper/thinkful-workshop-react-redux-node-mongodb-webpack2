@@ -8,19 +8,29 @@ const VENDOR_LIBS = [
   'react', 'react-dom', 'validator'
 ];
 
-console.log(process.env.NODE_ENV);
+let filename;
+let bundle;
 
-const filename = process.env.NODE_ENV !== 'production' ? '[name].js' : '[name].[hash].js';
+if (process.env.NODE_ENV !== 'production') {
+  filename = '[name].js';
+  bundle = [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:9000',
+    'webpack/hot/only-dev-server',
+    './src/index.js'
+  ];
+} else {
+  filename = '[name].[hash].js';
+  bundle = [
+    'babel-polyfill',
+    './src/index.js'
+  ];
+}
 
 module.exports = {
   entry: {
-    bundle: [
-      'babel-polyfill',
-      'react-hot-loader/patch',
-      'webpack-dev-server/client?http://localhost:9000',
-      'webpack/hot/only-dev-server',
-      './src/index.js'
-    ],
+    bundle,
     vendor: VENDOR_LIBS,
   },
   output: {
