@@ -8,9 +8,9 @@ const VENDOR_LIBS = [
   'react', 'react-dom', 'validator'
 ];
 
-const filename = process.env.NODE_ENV !== 'production' ?
-  '[name].js' :
-  '[name].[chunkhash].js';
+console.log(process.env.NODE_ENV);
+
+const filename = process.env.NODE_ENV !== 'production' ? '[name].js' : '[name].[hash].js';
 
 module.exports = {
   entry: {

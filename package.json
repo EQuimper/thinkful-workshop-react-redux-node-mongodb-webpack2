@@ -6,7 +6,7 @@
   "author": "EQuimper <quimperemanuel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production yarn run clean && webpack -p",
+    "build": "cross-env yarn run clean && NODE_ENV=production webpack -p",
     "clean": "rimraf dist npm-debug.log.*",
     "hello": "cross-env NODE_ENV=development webpack-dashboard -- nodemon index.js",
     "dev:c": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server",
