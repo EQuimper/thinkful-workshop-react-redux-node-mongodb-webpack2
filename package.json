@@ -8,10 +8,9 @@
   "scripts": {
     "heroku": "git push heroku heroku:master",
     "start": "cross-env NODE_ENV=production nodemon index.js",
-    "build": "cross-env yarn run clean && NODE_ENV=production webpack -p",
+    "build": "cross-env yarn run clean && NODE_ENV=production webpack -p --config webpack.dev.prod.js",
     "clean": "rimraf dist npm-debug.log.*",
-    "hello": "cross-env NODE_ENV=development webpack-dashboard -- nodemon index.js",
-    "dev:c": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server",
+    "dev:c": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --config webpack.dev.config.js",
     "dev:s": "cross-env NODE_ENV=development nodemon index.js"
   },
   "dependencies": {
