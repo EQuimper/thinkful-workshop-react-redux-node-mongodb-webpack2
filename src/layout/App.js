@@ -43,6 +43,7 @@ class App extends Component {
         ) : (
           <h1>{this.state.message}</h1>
         )}
+        <hr />
         {this.props.children}
       </div>
     );
