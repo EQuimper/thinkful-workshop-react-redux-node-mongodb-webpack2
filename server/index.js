@@ -9,15 +9,9 @@ const PORT = process.env.PORT || 3000;
 let mongoConf;
 
 if (process.env.NODE_ENV !== 'production') {
-  const webpackMiddleware = require('webpack-dev-middleware');
-  const webpack = require('webpack');
-  const webpackConfig = require('../webpack.config');
-  const DashboardPlugin = require('webpack-dashboard/plugin');
+  const { devMiddlewaresConfig } = require('./config');
 
-  const compiler = webpack(webpackConfig);
-  compiler.apply(new DashboardPlugin());
-
-  app.use(webpackMiddleware(compiler));
+  devMiddlewaresConfig(app);
   mongoConf = 'mongodb://localhost/myblog';
 } else {
   app.use(express.static('dist'));
