@@ -1,12 +1,14 @@
 {
-  "presets": [["es2015", {"modules": false}]],
   "env": {
     "development": {
-      "presets": ["env", "react", "stage-0"],
+      "presets": ["env", "react", "stage-0", ["es2015", {"modules": false}]],
       "plugins": [
         "transform-class-properties",
         "react-hot-loader/babel"
       ]
+    },
+    "production": {
+      "presets": ["es2015"]
     }
   }
 }
