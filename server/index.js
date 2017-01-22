@@ -6,19 +6,28 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.get('/api/v1/hello', (req, res) => {
+  res.json({ message: 'hello from the server' });
+});
+
 let mongoConf;
 
 if (process.env.NODE_ENV !== 'production') {
-  const { devMiddlewaresConfig } = require('./config');
-
-  devMiddlewaresConfig(app);
+  /**
+  * Database on dev
+  */
   mongoConf = 'mongodb://localhost/myblog';
 } else {
+  console.log('hello');
   app.use(express.static('dist'));
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
   });
-  mongoConf = process.env.MONGO_URL;
+
+  /**
+  * Database on production
+  */
+  mongoConf = 'mongodb://localhost/myblog';
 }
 
 /**
@@ -29,10 +38,6 @@ dbConfig(mongoConf);
 * MIDDLEWARES
 */
 middlewaresConfig(app);
-
-app.get('/api/v1/hello', (req, res) => {
-  res.send('Hello Hello');
-});
 
 app.listen(PORT, err => {
   if (err) { return console.error(err); }

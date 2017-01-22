@@ -6,12 +6,17 @@ class App extends Component {
   }
 
   state = {
-    team: 'Thinkful',
-    dots: []
+    dots: [],
+    loading: false,
+    message: null
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this._setToggleTimeout();
+    this.setState({ loading: true });
+    const res = await fetch('/api/v1/hello');
+    const data = await res.json();
+    this.setState({ loading: false, message: data.message });
   }
 
   componentWillUnmount() {
@@ -31,11 +36,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello {this.props.name}</h1>
-        <h3>And welcome {this.state.team}</h3>
-        <h5>App in contructions</h5>
+        <h1>Hello! {this.props.name}</h1>
         <hr />
-        <h1>Loading {this.state.dots}</h1>
+        {this.state.loading ? (
+          <h1>Loading {this.state.dots}</h1>
+        ) : (
+          <h1>{this.state.message}</h1>
+        )}
+        {this.props.children}
       </div>
     );
   }
