@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Title from '../components/Title';
 
 class App extends Component {
   static defaultProps = {
-    name: 'Emanuel'
+    name: 'Thinkful'
   }
 
   state = {
@@ -36,14 +37,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello!!! {this.props.name}</h1>
-        <hr />
-        {this.state.loading ? (
-          <h1>Loading {this.state.dots}</h1>
-        ) : (
-          <h1>{this.state.message}</h1>
-        )}
-        <hr />
+        <Title>This is a title</Title>
         {this.props.children}
       </div>
     );
