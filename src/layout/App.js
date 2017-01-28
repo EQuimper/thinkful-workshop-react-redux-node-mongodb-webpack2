@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello! {this.props.name}</h1>
+        <h1>Hello!!! {this.props.name}</h1>
         <hr />
         {this.state.loading ? (
           <h1>Loading {this.state.dots}</h1>

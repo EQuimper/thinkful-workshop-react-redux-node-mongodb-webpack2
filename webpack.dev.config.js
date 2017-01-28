@@ -1,14 +1,14 @@
 const webpack = require('webpack');
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const VENDOR_LIBS = [
-  'react', 'react-dom', 'validator'
+  'react', 'react-dom'
 ];
 
 module.exports = {
+  devtool: 'inline-source-map',
   entry: {
     bundle: [
       'babel-polyfill',
@@ -17,10 +17,10 @@ module.exports = {
       'webpack/hot/only-dev-server',
       './src/index.js'
     ],
-    vendor: VENDOR_LIBS,
+    vendor: VENDOR_LIBS
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: join(__dirname, 'dist'),
     filename: '[name].js',
     publicPath: '/'
   },
@@ -29,7 +29,7 @@ module.exports = {
       {
         use: 'babel-loader',
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         loader: ExtractTextPlugin.extract({
@@ -39,39 +39,22 @@ module.exports = {
       }
     ]
   },
-  performance: {
-    hints: false
-  },
-  devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    contentBase: join(__dirname, 'dist'),
     port: 9000,
     hot: true,
-    inline: true,
     historyApiFallback: true,
     open: true,
-    quiet: true,
     proxy: {
       '/api': 'http://localhost:3000'
     }
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
-    }),
-    new DashboardPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Boilerplate',
-      template: 'src/index.html'
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin('style.css'),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new ExtractTextPlugin('style.css')
   ]
 };
