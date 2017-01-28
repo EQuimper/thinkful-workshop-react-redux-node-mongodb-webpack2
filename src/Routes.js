@@ -1,12 +1,21 @@
 import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 import App from './layout/App';
-import { Posts } from './modules';
+
+const componentRoutes = {
+  component: App,
+  path: '/',
+  childRoutes: [
+    {
+      path: '/posts',
+      getComponent(location, cb) {
+        System.import('./modules/posts/Posts')
+          .then(module => cb(null, module.default));
+      }
+    }
+  ]
+};
 
 export default () => (
-  <Router history={browserHistory} key={Math.random()}>
-    <Route path="/" component={App}>
-      <Route path="posts" component={Posts} />
-    </Route>
-  </Router>
+  <Router history={browserHistory} key={Math.random()} routes={componentRoutes} />
 );
