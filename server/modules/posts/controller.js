@@ -3,7 +3,7 @@ import Post from './model';
 /**
 * Create
 */
-export const createPost = (req, res) => {
+export const createPost = async (req, res) => {
   const { title, text } = req.body;
 
   if (!title) {
@@ -20,30 +20,31 @@ export const createPost = (req, res) => {
 
   const newPost = new Post({ title, text });
 
-  newPost
-    .save()
-    .then(
-      post => res.status(201).json({ error: false, message: 'Post created', post }),
-      err => res.status(401).json({ error: true, message: err.message })
-    );
+  try {
+    res.status(200).json({ error: false, post: await newPost.save() });
+  } catch (e) {
+    res.status(e.status).json({ error: true, message: e.message });
+  }
 };
 
 /**
 * GET ALL
 */
-export const fetchPosts = (req, res) =>
-  Post.find({})
-    .then(
-      posts => res.status(200).json({ error: false, posts }),
-      err => res.status(401).json({ error: true, message: err.message })
-    );
+export const fetchPosts = async (req, res) => {
+  try {
+    res.status(200).json({ error: false, posts: await Post.find({}) });
+  } catch (e) {
+    res.status(e.status).json({ error: true, message: e.message });
+  }
+};
 
 /**
 * GET BY ID
 */
-export const fetchPostById = (req, res) =>
-  Post.findById(req.params.id)
-    .then(
-      post => res.status(200).json({ error: false, post }),
-      err => res.status(401).json({ error: true, message: err.message })
-    );
+export const fetchPostById = async (req, res) => {
+  try {
+    res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
+  } catch (e) {
+    res.status(e.status).json({ error: true, message: e.message });
+  }
+};
