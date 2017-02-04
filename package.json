@@ -1,6 +1,6 @@
 {
   "name": "thinkful-workshop-full-stack-webpack2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Thinkful workshop for help student work with a full stack project",
   "main": "index.js",
   "author": "EQuimper <quimperemanuel@gmail.com>",
@@ -39,7 +39,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "css-loader": "^0.26.1",
-    "eslint-config-rallycoding": "^3.2.0",
+    "eslint-config-equimper": "^1.2.0",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "html-webpack-plugin": "^2.26.0",
     "react-hot-loader": "3.0.0-beta.6",

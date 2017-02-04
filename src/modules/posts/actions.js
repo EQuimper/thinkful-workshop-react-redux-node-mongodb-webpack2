@@ -10,4 +10,4 @@ const fetchAllPosts = posts => ({
 export const getFetchAllPosts = () => async dispatch => {
   const data = await fetchPosts();
   return dispatch(fetchAllPosts(data.posts));
-};
+}

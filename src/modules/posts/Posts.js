@@ -33,8 +33,6 @@ class Posts extends Component {
               <p>{post.text}</p>
             </Card>
             <br />
-            <br />
-            <br />
           </li>
         ))}
       </div>
