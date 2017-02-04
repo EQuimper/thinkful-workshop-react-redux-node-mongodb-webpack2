@@ -2,10 +2,9 @@ const webpack = require('webpack');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const VENDOR_LIBS = [
-  'react', 'react-dom', 'styled-components'
+  'react', 'react-dom', 'styled-components', 'react-redux', 'redux'
 ];
 
 module.exports = {
@@ -55,10 +54,6 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    }),
-    new ExtractTextPlugin('style.css'),
-    // new BundleAnalyzerPlugin({
-    //   analyzerPort: 9001
-    // })
+    })
   ]
 };
