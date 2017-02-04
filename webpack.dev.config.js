@@ -57,8 +57,8 @@ module.exports = {
       template: 'src/index.html'
     }),
     new ExtractTextPlugin('style.css'),
-    new BundleAnalyzerPlugin({
-      analyzerPort: 9001
-    })
+    // new BundleAnalyzerPlugin({
+    //   analyzerPort: 9001
+    // })
   ]
 };

@@ -1,33 +1,45 @@
 import React, { Component } from 'react';
-import { fetchPosts } from '../../helpers/api';
+import { connect } from 'react-redux';
+import Card from '../../components/Card';
+import { getFetchAllPosts } from './actions';
 
 class Posts extends Component {
-  state = { isFetched: false, posts: [] }
+  state = { loading: false }
 
   async componentDidMount() {
-    const data = await fetchPosts();
-
-    this.setState({ isFetched: true, posts: data.posts });
+    this.setState({ loading: true });
+    await this.props.getFetchAllPosts();
+    this.setState({ loading: false });
   }
 
   render() {
-    if (!this.state.isFetched) {
+    if (this.state.loading) {
       return (
         <h1>Loading...</h1>
       );
     }
     return (
       <div>
-        {this.state.posts.map((post, i) => (
-          <div key={i}>
-            <h3>{post.title}</h3>
+        {this.props.posts.map((post, i) => (
+          <li key={i}>
+            <Card>
+              <h1>{post.title}</h1>
+              <p>{post.text}</p>
+            </Card>
             <hr />
-            <p>{post.text}</p>
-          </div>
+            <br />
+            <br />
+            <br />
+          </li>
         ))}
       </div>
     );
   }
 }
 
-export default Posts;
+export default connect(
+  state => ({
+    posts: state.posts
+  }),
+  { getFetchAllPosts }
+)(Posts);

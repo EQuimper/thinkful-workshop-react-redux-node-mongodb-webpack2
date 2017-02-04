@@ -38,6 +38,10 @@ class App extends Component {
     return (
       <div>
         <Title>This is a title</Title>
+        <Title>This is a title</Title>
+        <Title>This is a title</Title>
+        <Title>This is a title</Title>
+        <Title>This is a title</Title>
         {this.props.children}
       </div>
     );
