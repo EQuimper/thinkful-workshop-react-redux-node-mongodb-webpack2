@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
 import { getFetchAllPosts } from './actions';
 
@@ -17,6 +18,8 @@ class Posts extends Component {
     await this.props.getFetchAllPosts();
     this.setState({ loading: false });
   }
+
+  _goToHome = () => browserHistory.push('/');
 
   render() {
     if (this.state.loading) {
@@ -39,6 +42,7 @@ class Posts extends Component {
             <br />
           </li>
         ))}
+        <button onClick={this._goToHome}>Go Home</button>
       </div>
     );
   }
