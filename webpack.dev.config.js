@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components'
