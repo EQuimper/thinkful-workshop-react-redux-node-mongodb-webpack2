@@ -23,6 +23,10 @@ class Posts extends Component {
       return (
         <h1>Loading...</h1>
       );
+    } else if (this.props.posts.length === 0) {
+      return (
+        <h1>No post yet</h1>
+      )
     }
     return (
       <div>
