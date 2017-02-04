@@ -9,10 +9,11 @@
     "start": "cross-env NODE_ENV=production nodemon index.js",
     "build": "cross-env yarn run clean && NODE_ENV=production webpack -p --progress --config webpack.prod.config.js",
     "clean": "rimraf dist",
-    "dev:c": "cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --config webpack.dev.config.js",
+    "dev:c": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.config.js",
     "dev:s": "cross-env NODE_ENV=development nodemon index.js"
   },
   "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-polyfill": "^6.22.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.22.0",
