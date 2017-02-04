@@ -34,10 +34,21 @@ class App extends Component {
     }, 1000);
   }
 
-  render() {
+  _renderWithoutChildren() {
     return (
       <div>
         <Title>This is a title</Title>
+        <h5>{this.state.message}</h5>
+      </div>
+    )
+  }
+
+  render() {
+    if (this.props.location.pathname === '/') {
+      return this._renderWithoutChildren()
+    }
+    return (
+      <div>
         {this.props.children}
       </div>
     );
