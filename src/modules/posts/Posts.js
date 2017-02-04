@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 import Card from '../../components/Card';
 import { getFetchAllPosts } from './actions';
 
+@connect(
+  state => ({
+    posts: state.posts
+  }),
+  { getFetchAllPosts }
+)
 class Posts extends Component {
   state = { loading: false }
 
@@ -26,7 +32,6 @@ class Posts extends Component {
               <h1>{post.title}</h1>
               <p>{post.text}</p>
             </Card>
-            <hr />
             <br />
             <br />
             <br />
@@ -37,9 +42,4 @@ class Posts extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    posts: state.posts
-  }),
-  { getFetchAllPosts }
-)(Posts);
+export default Posts;
