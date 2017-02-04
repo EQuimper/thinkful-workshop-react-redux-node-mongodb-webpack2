@@ -34,7 +34,7 @@ if (process.env.NODE_ENV !== 'production') {
   /**
   * Database on production
   */
-  mongoConf = 'mongodb://localhost/myblog';
+  mongoConf = process.env.MONGODB;
 }
 
 /**
