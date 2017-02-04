@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import Title from '../components/Title';
 
 class App extends Component {
@@ -34,11 +35,14 @@ class App extends Component {
     }, 1000);
   }
 
+  _goToPosts = () => browserHistory.push('/posts');
+
   _renderWithoutChildren() {
     return (
       <div>
         <Title>This is a title</Title>
         <h5>{this.state.message}</h5>
+        <button onClick={this._goToPosts}>Go to Posts</button>
       </div>
     )
   }
