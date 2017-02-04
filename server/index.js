@@ -1,5 +1,5 @@
 import express from 'express';
-import path from 'path';
+import { join } from 'path';
 import { dbConfig, middlewaresConfig } from './config';
 import { PostRoutes } from './modules';
 
@@ -18,29 +18,23 @@ app.get('/api/v1/hello', (req, res) => {
 
 app.use('/api/v1', [PostRoutes]);
 
-let mongoConf;
-
 if (process.env.NODE_ENV !== 'production') {
   /**
   * Database on dev
   */
-  mongoConf = 'mongodb://localhost/myblog';
+  const mongoConf = 'mongodb://localhost/myblog';
+  dbConfig(mongoConf);
 } else {
+  require('dotenv').config();
+
   app.use(express.static('dist'));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    res.sendFile(join(__dirname, '../dist/index.html'));
   });
 
-  /**
-  * Database on production
-  */
-  mongoConf = process.env.MONGODB;
+  const mongoConf = process.env.MONGODB;
+  dbConfig(mongoConf);
 }
-
-/**
-* DATABASE
-*/
-dbConfig(mongoConf);
 
 app.listen(PORT, err => {
   if (err) { return console.error(err); }
