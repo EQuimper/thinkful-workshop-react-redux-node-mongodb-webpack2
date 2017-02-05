@@ -43,7 +43,7 @@
     "babel-preset-env": "^1.1.8",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
-    "eslint-config-equimper": "^1.3.0",
+    "eslint-config-equimper": "^1.3.3",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "html-webpack-plugin": "^2.26.0",
     "jest": "^18.1.0",
