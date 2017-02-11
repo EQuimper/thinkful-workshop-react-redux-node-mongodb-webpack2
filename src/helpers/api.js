@@ -5,17 +5,20 @@ const fetchData = url =>
     .catch(e => console.log(e));
 
 class PostApi {
+  fetchData: Function
+
   constructor() {
     this.fetchData = fetchData;
   }
-  async fetchPosts() {
+
+  async fetchPosts(): Object {
     try {
       return await this.fetchData('posts');
     } catch (e) {
       console.log(e);
     }
   }
-  async fetchSinglePost(id: string) {
+  async fetchSinglePost(id: string): Object {
     try {
       return await this.fetchData(`posts/${id}`);
     } catch (e) {
