@@ -4,12 +4,10 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-let middlewares;
+let middlewares = [thunk];
 
 if (process.env.NODE_ENV !== 'production') {
-  middlewares = [logger(), thunk];
-} else {
-  middlewares = [thunk];
+  middlewares = [...middlewares, logger()];
 }
 
 const enhancers = compose(
