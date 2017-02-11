@@ -4,14 +4,19 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-const middlewares = [
-  logger(),
-  thunk,
-];
+let middlewares;
+
+if (process.env.NODE_ENV !== 'production') {
+  middlewares = [logger(), thunk];
+} else {
+  middlewares = [thunk];
+}
 
 const enhancers = compose(
   applyMiddleware(...middlewares),
-  window.devToolsExtension ? window.devToolsExtension() : f => f
+  (window.devToolsExtension && process.env.NODE_ENV !== 'production')
+  ? window.devToolsExtension()
+  : f => f
 );
 
 // Create the store with the (reducer, initialState, compose)
