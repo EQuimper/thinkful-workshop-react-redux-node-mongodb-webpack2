@@ -1,4 +1,6 @@
-import { fetchPosts, fetchSinglePost } from '../../helpers/api';
+import { PostApi } from '../../helpers/api';
+
+const postApi = new PostApi();
 
 export const FETCH_ALL_POSTS = 'FETCH_ALL_POSTS';
 
@@ -11,8 +13,8 @@ const fetchAllPosts = posts => ({
 });
 
 export const getFetchAllPosts = () => async dispatch => {
-  const data = await fetchPosts();
-  return dispatch(fetchAllPosts(data.posts));
+  const { posts } = await postApi.fetchPosts();
+  return dispatch(fetchAllPosts(posts));
 };
 
 /**
@@ -26,10 +28,13 @@ const fetchPost = post => ({
 });
 
 export const getFetchSinglePost = id => async dispatch => {
-  const data = await fetchSinglePost(id);
-  return dispatch(fetchPost(data.post));
+  const { post } = await postApi.fetchSinglePost(id);
+  return dispatch(fetchPost(post));
 };
 
+/**
+ * SELECTED ID FOR RESELECT
+ */
 export const SELECTED_POST = 'SELECTED_POST';
 
 export const selectPost = id => ({
