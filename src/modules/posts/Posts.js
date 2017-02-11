@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
-import { getFetchAllPosts } from './actions';
+import { getFetchAllPosts, selectPost } from './actions';
 
 @connect(
   state => ({
-    posts: state.posts
+    posts: state.posts.posts
   }),
-  { getFetchAllPosts }
+  { getFetchAllPosts, selectPost }
 )
 class Posts extends Component {
   state = { loading: false }
@@ -20,6 +20,11 @@ class Posts extends Component {
   }
 
   _goToHome = () => browserHistory.push('/');
+
+  _onClick = id => {
+    this.props.selectPost(id);
+    browserHistory.push(`/posts/${id}`);
+  }
 
   render() {
     if (this.state.loading) {
@@ -34,7 +39,7 @@ class Posts extends Component {
     return (
       <div>
         {this.props.posts.map((post, i) => (
-          <li key={i}>
+          <li key={i} onClick={() => this._onClick(post._id)}>
             <Card>
               <h1>{post.title}</h1>
               <p>{post.text}</p>

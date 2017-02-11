@@ -10,3 +10,11 @@ export const fetchPosts = async () => {
     console.log(e);
   }
 };
+
+export const fetchSinglePost = async id => {
+  try {
+    return await fetchData(`posts/${id}`);
+  } catch (e) {
+    console.log(e);
+  }
+};

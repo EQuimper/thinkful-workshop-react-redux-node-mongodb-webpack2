@@ -2234,9 +2234,9 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-equimper@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-equimper/-/eslint-config-equimper-1.3.0.tgz#bcae96a1779cb8196184bc907a39fb165b6d21bd"
+eslint-config-equimper@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/eslint-config-equimper/-/eslint-config-equimper-1.3.3.tgz#4755aaebe678ce9117f4aee27aba75344f870ff7"
   dependencies:
     babel-eslint "^7.1.1"
     eslint "^3.14.1"
@@ -5407,6 +5407,10 @@ requireindex@~1.1.0:
 requires-port@1.0.x, requires-port@1.x.x:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+
+reselect@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-2.5.4.tgz#b7d23fdf00b83fa7ad0279546f8dbbbd765c7047"
 
 resolve-from@^1.0.0:
   version "1.0.1"

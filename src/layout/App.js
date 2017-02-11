@@ -44,12 +44,12 @@ class App extends Component {
         <h5>{this.state.message}</h5>
         <button onClick={this._goToPosts}>Go to Posts</button>
       </div>
-    )
+    );
   }
 
   render() {
     if (this.props.location.pathname === '/') {
-      return this._renderWithoutChildren()
+      return this._renderWithoutChildren();
     }
     return (
       <div>
