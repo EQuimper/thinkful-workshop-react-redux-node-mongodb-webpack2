@@ -1,3 +1,4 @@
+/** @flow */
 const fetchData = url =>
   fetch(`/api/v1/${url}`)
     .then(res => res.json())
@@ -14,7 +15,7 @@ class PostApi {
       console.log(e);
     }
   }
-  async fetchSinglePost(id) {
+  async fetchSinglePost(id: string) {
     try {
       return await this.fetchData(`posts/${id}`);
     } catch (e) {
