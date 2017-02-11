@@ -34,7 +34,7 @@ export const fetchPosts = async (req, res) => {
   try {
     return res.status(200).json({ error: false, posts: await Post.find({}) });
   } catch (e) {
-    return res.status(e.status).json({ error: true, message: e.message });
+    return res.status(500).json({ error: true, message: 'Something Wrong Happen' });
   }
 };
 
@@ -45,6 +45,6 @@ export const fetchPostById = async (req, res) => {
   try {
     return res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
   } catch (e) {
-    return res.status(e.status).json({ error: true, message: e.message });
+    return res.status(500).json({ error: true, message: 'Something Wrong Happen' });
   }
 };

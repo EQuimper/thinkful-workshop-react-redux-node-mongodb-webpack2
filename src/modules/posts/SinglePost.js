@@ -7,19 +7,24 @@ import SinglePostSelector from './single_post_selector';
 @connect(
   state => ({
     post: SinglePostSelector(state),
-    postDomains: state.posts.post
+    postDomains: state.posts
   }),
   { getFetchSinglePost }
 )
 class SinglePost extends Component {
   state = {
     loading: true,
+    error: false,
     post: null
   }
   async componentDidMount() {
     if (this.props.post.length < 1) {
       await this.props.getFetchSinglePost(this.props.params.id);
-      this.setState({ post: this.props.postDomains, loading: false });
+      if (this.props.postDomains.error) {
+        this.setState({ loading: false, error: true });
+      } else {
+        this.setState({ post: this.props.postDomains.post, loading: false });
+      }
     } else {
       this.setState({ loading: false, post: this.props.post[0] });
     }
@@ -29,15 +34,22 @@ class SinglePost extends Component {
       return (
         <h1>Loading...</h1>
       );
+    } else if (this.state.error) {
+      return (
+        <div>
+          <h1>Post not exist</h1>
+          <button onClick={() => browserHistory.push('/posts')}>
+            Go Back
+          </button>
+        </div>
+      );
     }
     const { post } = this.state;
     return (
       <div>
         <h1>{post.title}</h1>
         <p>{post.text}</p>
-
         <hr />
-
         <button onClick={() => browserHistory.push('/posts')}>
           Go Back
         </button>
