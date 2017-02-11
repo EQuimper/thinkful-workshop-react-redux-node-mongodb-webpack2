@@ -43,8 +43,8 @@ export const fetchPosts = async (req, res) => {
 */
 export const fetchPostById = async (req, res) => {
   try {
-    res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
+    return res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
   } catch (e) {
-    res.status(e.status).json({ error: true, message: e.message });
+    return res.status(e.status).json({ error: true, message: e.message });
   }
 };

@@ -12,6 +12,13 @@ const componentRoutes = {
         System.import('./modules/posts/Posts')
           .then(module => cb(null, module.default));
       }
+    },
+    {
+      path: '/posts/:id',
+      getComponent(location, cb) {
+        System.import('./modules/posts/SinglePost')
+          .then(module => cb(null, module.default));
+      }
     }
   ]
 };
