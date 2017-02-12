@@ -3,7 +3,10 @@ import { PostApi } from '../../helpers/api';
 
 const postApi = new PostApi();
 
-export const FETCH_ALL_POSTS = 'FETCH_ALL_POSTS';
+export const FETCH_ALL_POSTS: string = 'FETCH_ALL_POSTS';
+export const FETCH_SINGLE_POST: string = 'FETCH_SINGLE_POST';
+export const FETCH_SINGLE_POST_ERROR: string = 'FETCH_SINGLE_POST_ERROR';
+export const SELECTED_POST: string = 'SELECTED_POST';
 
 /**
  * FETCH ALL POSTS
@@ -21,8 +24,6 @@ export const getFetchAllPosts = () => async (dispatch: Function) => {
 /**
  * FETCH SINGLE POST WITH HIS ID
  */
-export const FETCH_SINGLE_POST = 'FETCH_SINGLE_POST';
-export const FETCH_SINGLE_POST_ERROR = 'FETCH_SINGLE_POST_ERROR';
 
 const fetchPost = (post: Object) => ({
   type: FETCH_SINGLE_POST,
@@ -44,8 +45,6 @@ export const getFetchSinglePost = (id: string) => async (dispatch: Function) => 
 /**
  * SELECTED ID FOR RESELECT
  */
-export const SELECTED_POST = 'SELECTED_POST';
-
 export const selectPost = (id: string) => ({
   type: SELECTED_POST,
   id

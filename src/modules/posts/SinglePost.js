@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { getFetchSinglePost } from './actions';
@@ -12,11 +12,18 @@ import SinglePostSelector from './single_post_selector';
   { getFetchSinglePost }
 )
 class SinglePost extends Component {
+  static propTypes = {
+    post: PropTypes.array,
+    postDomains: PropTypes.object,
+    getFetchSinglePost: PropTypes.func.isRequired
+  }
+
   state = {
     loading: true,
     error: false,
     post: null
   }
+
   async componentDidMount() {
     if (this.props.post.length < 1) {
       await this.props.getFetchSinglePost(this.props.params.id);

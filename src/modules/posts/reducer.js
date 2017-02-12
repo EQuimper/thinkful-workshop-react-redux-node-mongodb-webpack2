@@ -1,9 +1,17 @@
+/** @flow */
 import {
   FETCH_ALL_POSTS,
   FETCH_SINGLE_POST,
   FETCH_SINGLE_POST_ERROR,
   SELECTED_POST
 } from './actions';
+
+type State = {
+  posts: Array<Object>,
+  post: ?Object,
+  selectPostId: ?string,
+  error: boolean
+}
 
 const INITIAL_STATE = {
   posts: [],
@@ -12,7 +20,7 @@ const INITIAL_STATE = {
   error: false
 };
 
-export default (state = INITIAL_STATE, action) => {
+export default (state: State = INITIAL_STATE, action: Object): Object => {
   switch (action.type) {
     case FETCH_ALL_POSTS:
       return {
@@ -24,8 +32,7 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         error: false,
-        post: action.post,
-
+        post: action.post
       };
     case FETCH_SINGLE_POST_ERROR:
       return {
