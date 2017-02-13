@@ -24,12 +24,14 @@ export const getFetchAllPosts = () => async (dispatch: Function) => {
 /**
  * FETCH SINGLE POST WITH HIS ID
  */
-
 const fetchPost = (post: Object) => ({
   type: FETCH_SINGLE_POST,
   post
 });
 
+/**
+ * WHEN FETCH RECEIVE AN ERROR
+ */
 const fetchPostError = () => ({
   type: FETCH_SINGLE_POST_ERROR
 });

@@ -1,10 +1,19 @@
 /** @flow */
 import { createSelector } from 'reselect';
 
-const postsSelector = state => state.posts.posts;
+/**
+ * GET THE ARRAY OF POSTS IN THE STATE
+ */
+const postsSelector = (state: Object) => state.posts.posts;
 
-const selectPostId = state => state.posts.selectPostId;
+/**
+ * GET THE ID FOR MAKE THE SELECTION
+ */
+const selectPostId = (state: Object) => state.posts.selectPostId;
 
+/**
+ * DO THE LOGIC ABOUT FILTER THE POSTS ARRAY AND RETURN AN ARRAY WITH 1 ITEM
+ */
 const getPost = (posts: Array<Object>, id: string): Array<Object> =>
   posts.filter(p => p._id === id);
 
