@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { getFetchSinglePost } from './actions';
 import Button from '../../components/Button';
+import LoadingScreen from '../../components/LoadingScreen';
 import SinglePostSelector from './single_post_selector';
 
 type Post = {
@@ -61,9 +62,7 @@ class SinglePost extends Component {
 
   render() {
     if (this.state.loading) {
-      return (
-        <h1>Loading...</h1>
-      );
+      return <LoadingScreen />;
     } else if (this.state.error) {
       return (
         <div>
