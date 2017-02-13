@@ -16,12 +16,14 @@ type Props = {
 }
 
 class App extends Component {
+  props: Props;
+  state: State;
+
+  _timer: () => void;
+
   static defaultProps = {
     name: 'Thinkful'
   };
-
-  props: Props;
-  state: State;
 
   state = {
     dots: [],
