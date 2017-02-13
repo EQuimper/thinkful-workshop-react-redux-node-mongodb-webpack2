@@ -9,5 +9,9 @@
     "flowtype/use-flow-type": 1,
     "flowtype-errors/show-errors": 2,
     "react/sort-comp": 0
+  },
+  "globals": {
+    "beforeEach": false,
+    "afterEach": false
   }
 }
