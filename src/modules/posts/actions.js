@@ -11,13 +11,13 @@ export const SELECTED_POST: string = 'SELECTED_POST';
 /**
  * FETCH ALL POSTS
  */
-const fetchAllPosts = (posts: Object) => ({
+const fetchAllPosts = (posts: Array<Object>) => ({
   type: FETCH_ALL_POSTS,
   posts
 });
 
 export const getFetchAllPosts = () => async (dispatch: Function) => {
-  const { posts } = await postApi.fetchPosts();
+  const { posts }: { posts: Array<Object> } = await postApi.fetchPosts();
   return dispatch(fetchAllPosts(posts));
 };
 
@@ -35,7 +35,7 @@ const fetchPostError = () => ({
 });
 
 export const getFetchSinglePost = (id: string) => async (dispatch: Function) => {
-  const { post } = await postApi.fetchSinglePost(id);
+  const { post }: { post: Object } = await postApi.fetchSinglePost(id);
   if (!post) {
     return dispatch(fetchPostError());
   }

@@ -1,8 +1,19 @@
+/** @flow */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
 import { getFetchAllPosts, selectPost } from './actions';
+
+type Props = {
+  posts: Array<Object>,
+  getFetchAllPosts: () => void,
+  selectPost: (id: string) => void
+}
+
+type State = {
+  loading: boolean
+}
 
 @connect(
   state => ({
@@ -10,18 +21,24 @@ import { getFetchAllPosts, selectPost } from './actions';
   }),
   { getFetchAllPosts, selectPost }
 )
-class Posts extends Component {
+class Posts extends Component<void, Props, State> {
   state = { loading: false }
 
-  async componentDidMount() {
-    this.setState({ loading: true });
-    await this.props.getFetchAllPosts();
-    this.setState({ loading: false });
+  componentDidMount() {
+    (async () => {
+      this.setState({ loading: true });
+
+      if (this.props.posts.length < 1) {
+        await this.props.getFetchAllPosts();
+      }
+
+      this.setState({ loading: false });
+    })();
   }
 
   _goToHome = () => browserHistory.push('/');
 
-  _onClick = id => {
+  _onClick = (id: string) => {
     this.props.selectPost(id);
     browserHistory.push(`/posts/${id}`);
   }
