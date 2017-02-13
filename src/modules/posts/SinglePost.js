@@ -1,4 +1,7 @@
 /** @flow */
+/**
+ * Show a single post who maybe came from the selector or from a server request.
+ */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';

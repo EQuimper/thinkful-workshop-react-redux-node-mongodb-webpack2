@@ -1,4 +1,9 @@
 /** @flow */
+/**
+ * Create a selector who take the posts from the state and return an array
+ * of one post. This is for remove the server request when we have
+ * already all the info in the state.
+ */
 import { createSelector } from 'reselect';
 
 /**

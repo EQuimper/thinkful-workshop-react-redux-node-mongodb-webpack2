@@ -1,4 +1,8 @@
 /** @flow */
+/**
+ * Fetch the posts from the server in the componentDidMount. Show the list of posts
+ * and make it able to be click and see the post in details.
+ */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
