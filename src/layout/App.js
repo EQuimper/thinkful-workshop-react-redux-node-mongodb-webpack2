@@ -10,10 +10,10 @@ type Props = {
   children: React$Element<*>
 }
 
-const App = ({ children, location }: Props) => {
+const App = ({ children, location }: Props): React$Element<*> => {
   const _goToPosts: Function = () => browserHistory.push('/posts');
 
-  const _renderWithoutChildren = () => (
+  const _renderWithoutChildren = (): React$Element<*> => (
     <ContainerFluidCenter>
       <Title>This is a title</Title>
       <Button onClick={() => _goToPosts()}>
