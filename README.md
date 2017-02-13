@@ -5,6 +5,8 @@
 - MongoDB
 - Node.JS
 - Webpack2
+- FlowTypes
+- Styled-Component
 
 https://salty-falls-54316.herokuapp.com/
 

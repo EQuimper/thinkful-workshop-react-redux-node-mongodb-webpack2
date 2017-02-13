@@ -1,11 +1,27 @@
+/** @flow */
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import Title from '../components/Title';
 
+type State = {
+  dots: Array<string>,
+  loading: boolean,
+  message: ?string
+}
+
+type Props = {
+  name: string,
+  location: Object,
+  children: React$Element<*>
+}
+
 class App extends Component {
   static defaultProps = {
     name: 'Thinkful'
-  }
+  };
+
+  props: Props;
+  state: State;
 
   state = {
     dots: [],
@@ -13,12 +29,14 @@ class App extends Component {
     message: null
   }
 
-  async componentDidMount() {
-    this._setToggleTimeout();
-    this.setState({ loading: true });
-    const res = await fetch('/api/v1/hello');
-    const data = await res.json();
-    this.setState({ loading: false, message: data.message });
+  componentDidMount() {
+    (async () => {
+      this._setToggleTimeout();
+      this.setState({ loading: true });
+      const res = await fetch('/api/v1/hello');
+      const data = await res.json();
+      this.setState({ loading: false, message: data.message });
+    })();
   }
 
   componentWillUnmount() {

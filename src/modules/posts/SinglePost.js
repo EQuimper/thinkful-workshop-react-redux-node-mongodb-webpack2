@@ -30,7 +30,10 @@ type State = {
   }),
   { getFetchSinglePost }
 )
-class SinglePost extends Component<void, Props, State> {
+class SinglePost extends Component {
+  props: Props;
+  state: State;
+
   state = {
     loading: true,
     error: false,

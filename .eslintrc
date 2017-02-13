@@ -7,6 +7,7 @@
   "rules": {
     "flowtype/define-flow-type": 1,
     "flowtype/use-flow-type": 1,
-    "flowtype-errors/show-errors": 2
+    "flowtype-errors/show-errors": 2,
+    "react/sort-comp": 0
   }
 }

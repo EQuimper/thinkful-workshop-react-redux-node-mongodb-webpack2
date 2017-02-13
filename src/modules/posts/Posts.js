@@ -5,8 +5,14 @@ import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
 import { getFetchAllPosts, selectPost } from './actions';
 
+type Post = {
+  title: string,
+  text: string,
+  _id: string
+}
+
 type Props = {
-  posts: Array<Object>,
+  posts: Array<Post>,
   getFetchAllPosts: () => void,
   selectPost: (id: string) => void
 }
@@ -21,7 +27,10 @@ type State = {
   }),
   { getFetchAllPosts, selectPost }
 )
-class Posts extends Component<void, Props, State> {
+class Posts extends Component {
+  props: Props;
+  state: State;
+
   state = { loading: false }
 
   componentDidMount() {
@@ -36,9 +45,9 @@ class Posts extends Component<void, Props, State> {
     })();
   }
 
-  _goToHome = () => browserHistory.push('/');
+  _goToHome = (): void => browserHistory.push('/');
 
-  _onClick = (id: string) => {
+  _onClick = (id: string): void => {
     this.props.selectPost(id);
     browserHistory.push(`/posts/${id}`);
   }
@@ -55,7 +64,7 @@ class Posts extends Component<void, Props, State> {
     }
     return (
       <div>
-        {this.props.posts.map((post, i) => (
+        {this.props.posts.map((post: Post, i: number) => (
           <li key={i} onClick={() => this._onClick(post._id)}>
             <Card>
               <h1>{post.title}</h1>
