@@ -4,7 +4,7 @@ const fetchData = url =>
     .then(res => res.json())
     .catch(e => console.log(e));
 
-class PostApi {
+export class PostApi {
   fetchData: Function
 
   constructor() {
@@ -26,5 +26,3 @@ class PostApi {
     }
   }
 }
-
-export { PostApi };
