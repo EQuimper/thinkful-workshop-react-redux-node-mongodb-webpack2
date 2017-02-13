@@ -7,6 +7,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
+import LoadingScreen from '../../components/LoadingScreen';
+import Button from '../../components/Button';
 import { getFetchAllPosts, selectPost } from './actions';
 
 type Post = {
@@ -35,17 +37,16 @@ class Posts extends Component {
   props: Props;
   state: State;
 
-  state = { loading: false }
+  state = { loading: true }
 
   componentDidMount() {
     (async () => {
-      this.setState({ loading: true });
-
       if (this.props.posts.length < 1) {
         await this.props.getFetchAllPosts();
+        this.setState({ loading: false });
+      } else {
+        this.setState({ loading: false });
       }
-
-      this.setState({ loading: false });
     })();
   }
 
@@ -58,9 +59,7 @@ class Posts extends Component {
 
   render() {
     if (this.state.loading) {
-      return (
-        <h1>Loading...</h1>
-      );
+      return <LoadingScreen />;
     } else if (!this.props.posts) {
       return (
         <h1>No post yet</h1>
@@ -77,7 +76,7 @@ class Posts extends Component {
             <br />
           </li>
         ))}
-        <button onClick={this._goToHome}>Go Home</button>
+        <Button onClick={this._goToHome}>Go Home</Button>
       </div>
     );
   }

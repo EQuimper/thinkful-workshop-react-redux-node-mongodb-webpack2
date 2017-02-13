@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import { getFetchSinglePost } from './actions';
+import Button from '../../components/Button';
 import SinglePostSelector from './single_post_selector';
 
 type Post = {
@@ -67,9 +68,9 @@ class SinglePost extends Component {
       return (
         <div>
           <h1>Post not exist</h1>
-          <button onClick={() => browserHistory.push('/posts')}>
+          <Button onClick={() => browserHistory.push('/posts')}>
             Go Back
-          </button>
+          </Button>
         </div>
       );
     }
@@ -79,9 +80,9 @@ class SinglePost extends Component {
         <h1>{this.state.post.title}</h1>
         <p>{this.state.post.text}</p>
         <hr />
-        <button onClick={() => browserHistory.push('/posts')}>
+        <Button onClick={() => browserHistory.push('/posts')}>
           Go Back
-        </button>
+        </Button>
       </div>
     );
   }
