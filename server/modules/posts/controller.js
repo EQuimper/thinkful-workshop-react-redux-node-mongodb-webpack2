@@ -5,6 +5,7 @@ import Post from './model';
 * Create
 */
 export const createPost = async (req: express$Request, res: express$Response) => {
+  // $FlowFixMe
   const { title, text } : { title: string, text: string } = req.body;
 
   if (!title) {
