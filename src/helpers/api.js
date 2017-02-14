@@ -1,24 +1,24 @@
 /** @flow */
-const fetchData = url =>
+const fetchData = (url: string): Promise<Object> =>
   fetch(`/api/v1/${url}`)
     .then(res => res.json())
-    .catch(e => console.log(e));
+    .catch((e: Object) => console.log(e));
 
 export class PostApi {
-  fetchData: Function
+  fetchData: (url: string) => Promise<Object>;
 
   constructor() {
     this.fetchData = fetchData;
   }
 
-  async fetchPosts(): Object {
+  async fetchPosts(): Promise<Object> {
     try {
       return await this.fetchData('posts');
     } catch (e) {
       console.log(e);
     }
   }
-  async fetchSinglePost(id: string): Object {
+  async fetchSinglePost(id: string): Promise<Object> {
     try {
       return await this.fetchData(`posts/${id}`);
     } catch (e) {

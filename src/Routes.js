@@ -1,3 +1,4 @@
+/** @flow */
 import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import App from './layout/App';
@@ -8,14 +9,14 @@ const componentRoutes = {
   childRoutes: [
     {
       path: '/posts',
-      getComponent(location, cb) {
+      getComponent(location: string, cb) {
         System.import('./modules/posts/Posts')
           .then(module => cb(null, module.default));
       }
     },
     {
       path: '/posts/:id',
-      getComponent(location, cb) {
+      getComponent(location: string, cb) {
         System.import('./modules/posts/SinglePost')
           .then(module => cb(null, module.default));
       }
