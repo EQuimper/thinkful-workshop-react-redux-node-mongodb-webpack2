@@ -17,3 +17,7 @@ https://salty-falls-54316.herokuapp.com/
 3. `npm run dev:s` or `yarn dev:s` for start the server
 4. `npm run dev:c` or `yarn dev:c` for start the client
 5. `localhost:9000` gonna open in your browser by webpack
+
+## FlowTypes
+
+When install new packages just run `flow-typed install`
