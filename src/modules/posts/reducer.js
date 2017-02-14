@@ -4,7 +4,7 @@ import {
   FETCH_SINGLE_POST,
   FETCH_SINGLE_POST_ERROR,
   SELECTED_POST
-} from './actions';
+} from './actionsTypes';
 
 type State = {
   posts: Array<Object>,
