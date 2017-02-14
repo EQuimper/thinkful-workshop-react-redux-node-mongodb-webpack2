@@ -20,7 +20,14 @@ const INITIAL_STATE = {
   error: false
 };
 
-export default (state: State = INITIAL_STATE, action: Object): Object => {
+type Action = {
+  type: 'FETCH_ALL_POSTS' | 'FETCH_SINGLE_POST' | 'FETCH_SINGLE_POST_ERROR' | 'SELECTED_POST',
+  posts: Array<Object>,
+  post: Object,
+  id: string
+}
+
+export default (state: State = INITIAL_STATE, action: Action): Object => {
   switch (action.type) {
     case FETCH_ALL_POSTS:
       return {

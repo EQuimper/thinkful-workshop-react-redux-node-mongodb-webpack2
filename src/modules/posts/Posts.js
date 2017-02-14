@@ -33,10 +33,7 @@ type State = {
   }),
   { getFetchAllPosts, selectPost }
 )
-class Posts extends Component {
-  props: Props;
-  state: State;
-
+class Posts extends Component<void, Props, State> {
   state = { loading: true }
 
   componentDidMount() {
