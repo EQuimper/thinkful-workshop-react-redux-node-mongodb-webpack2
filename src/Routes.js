@@ -6,8 +6,7 @@ import App from './layout/App';
 const errorLoading = (err: Object) =>
  console.error('Dynamic page loading failed', err);
 
-
-const loadRoute = (cb: Function) =>
+const loadRoute = (cb: (err: ?Object, module: Object) => void) =>
   (module: Object) => cb(null, module.default);
 
 const componentRoutes = {
@@ -16,7 +15,7 @@ const componentRoutes = {
   childRoutes: [
     {
       path: '/posts',
-      getComponent(location: string, cb) {
+      getComponent(location: string, cb: Function) {
         System.import('./modules/posts/Posts')
           .then(loadRoute(cb))
           .catch(errorLoading);
@@ -24,7 +23,7 @@ const componentRoutes = {
     },
     {
       path: '/posts/:id',
-      getComponent(location: string, cb) {
+      getComponent(location: string, cb: Function) {
         System.import('./modules/posts/SinglePost')
           .then(loadRoute(cb))
           .catch(errorLoading);
