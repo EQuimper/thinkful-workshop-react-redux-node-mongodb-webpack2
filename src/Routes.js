@@ -3,11 +3,15 @@ import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import App from './layout/App';
 
-const errorLoading = (err: Object) =>
+type Module = {
+  default: Object
+}
+
+const errorLoading = (err: Object): void =>
  console.error('Dynamic page loading failed', err);
 
-const loadRoute = (cb: (err: ?Object, module: Object) => void) =>
-  (module: Object) => cb(null, module.default);
+const loadRoute = (cb: (err: ?Object, module: Module) => void): Function =>
+  (module: Module) => cb(null, module.default);
 
 const componentRoutes = {
   component: App,
