@@ -1,3 +1,4 @@
+/** @flow */
 export const FETCH_ALL_POSTS = 'FETCH_ALL_POSTS';
 export const FETCH_SINGLE_POST = 'FETCH_SINGLE_POST';
 export const FETCH_SINGLE_POST_ERROR = 'FETCH_SINGLE_POST_ERROR';

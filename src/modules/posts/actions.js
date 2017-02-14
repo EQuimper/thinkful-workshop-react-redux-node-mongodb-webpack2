@@ -4,13 +4,11 @@ import {
   FETCH_ALL_POSTS,
   FETCH_SINGLE_POST,
   FETCH_SINGLE_POST_ERROR,
-  SELECTED_POST
-} from './actionsTypes';
-import type {
-  FetchAllPostsAction,
-  FetchPostAction,
-  FetchSinglePostErrorAction,
-  SelectPostAction
+  SELECTED_POST,
+  type FetchAllPostsAction,
+  type FetchPostAction,
+  type FetchSinglePostErrorAction,
+  type SelectPostAction
 } from './actionsTypes';
 
 const postApi: PostApi = new PostApi();
@@ -23,7 +21,7 @@ const fetchAllPosts = (posts: Array<Object>): FetchAllPostsAction => ({
   posts
 });
 
-export const getFetchAllPosts = () => async (dispatch: Function): Promise<void> => {
+export const getFetchAllPosts = () => async (dispatch: () => void): Promise<void> => {
   const { posts }: { posts: Array<Object> } = await postApi.fetchPosts();
   return dispatch(fetchAllPosts(posts));
 };
@@ -43,7 +41,7 @@ const fetchPostError = (): FetchSinglePostErrorAction => ({
   type: FETCH_SINGLE_POST_ERROR
 });
 
-export const getFetchSinglePost = (id: string) => async (dispatch: Function): Promise<void> => {
+export const getFetchSinglePost = (id: string) => async (dispatch: () => void): Promise<void> => {
   const { post }: { post: Object } = await postApi.fetchSinglePost(id);
   if (!post) {
     return dispatch(fetchPostError());

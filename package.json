@@ -47,8 +47,6 @@
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "eslint-config-equimper": "^1.3.3",
-    "eslint-plugin-flowtype": "^2.30.0",
-    "eslint-plugin-flowtype-errors": "^3.0.0",
     "extract-text-webpack-plugin": "2.0.0-beta.5",
     "flow-bin": "^0.39.0",
     "flow-typed": "^2.0.0",
