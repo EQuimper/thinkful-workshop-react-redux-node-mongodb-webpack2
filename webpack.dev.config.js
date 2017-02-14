@@ -9,6 +9,7 @@ const VENDOR_LIBS = [
 
 module.exports = {
   devtool: 'inline-source-map',
+  target: 'web',
   entry: {
     bundle: [
       'babel-polyfill',

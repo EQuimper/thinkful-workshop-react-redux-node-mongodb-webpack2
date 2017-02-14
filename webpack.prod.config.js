@@ -16,6 +16,7 @@ module.exports = {
     ],
     vendor: VENDOR_LIBS
   },
+  target: 'web',
   output: {
     path: join(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
