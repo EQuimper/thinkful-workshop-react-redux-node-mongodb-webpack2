@@ -9,11 +9,7 @@ import { getFetchSinglePost } from './actions';
 import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
 import SinglePostSelector from './single_post_selector';
-
-type Post = {
-  title: string,
-  text: string
-}
+import { type Post } from '../../flow/types';
 
 type Props = {
   post: Array<Post>,

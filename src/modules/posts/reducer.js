@@ -5,6 +5,7 @@ import {
   FETCH_SINGLE_POST_ERROR,
   SELECTED_POST
 } from './actionsTypes';
+import { type Post } from '../../flow/types';
 
 type State = {
   posts: Array<Object>,
@@ -22,8 +23,8 @@ const INITIAL_STATE = {
 
 type Action = {
   type: 'FETCH_ALL_POSTS' | 'FETCH_SINGLE_POST' | 'FETCH_SINGLE_POST_ERROR' | 'SELECTED_POST',
-  posts: Array<Object>,
-  post: Object,
+  posts: Array<Post>,
+  post: Post,
   id: string
 }
 
