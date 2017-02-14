@@ -4,7 +4,7 @@ import Post from './model';
 /**
 * Create
 */
-export const createPost = async (req: Object, res: Object) => {
+export const createPost = async (req: express$Request, res: express$Response) => {
   const { title, text } : { title: string, text: string } = req.body;
 
   if (!title) {
@@ -35,21 +35,21 @@ export const createPost = async (req: Object, res: Object) => {
 /**
 * GET ALL
 */
-export const fetchPosts = async (req: Object, res: Object) => {
+export const fetchPosts = async (req: express$Request, res: express$Response) => {
   try {
     return res.status(200).json({ error: false, posts: await Post.find({}) });
   } catch (e) {
-    return res.status(500).json({ error: true, message: 'Something Wrong Happen' });
+    return res.status(500).json({ error: false, message: 'Error server' });
   }
 };
 
 /**
 * GET BY ID
 */
-export const fetchPostById = async (req: Object, res: Object) => {
+export const fetchPostById = async (req: express$Request, res: express$Response) => {
   try {
     return res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
   } catch (e) {
-    return res.status(500).json({ error: true, message: 'Something Wrong Happen' });
+    return res.status(500).json({ error: false, message: 'Error server' });
   }
 };
