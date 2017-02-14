@@ -1,7 +1,8 @@
+/** @flow */
 import React from 'react';
 import ContainerFluidCenter from './ContainerFluidCenter';
 
-const LoadingScreen = () => (
+const LoadingScreen = (): React$Element<*> => (
   <ContainerFluidCenter>
     <div className="sk-folding-cube">
       <div className="sk-cube1 sk-cube" />
