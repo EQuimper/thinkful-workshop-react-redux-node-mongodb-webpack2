@@ -21,3 +21,7 @@ https://salty-falls-54316.herokuapp.com/
 ## FlowTypes
 
 When install new packages just run `flow-typed install`
+
+## TODO
+
+- [ ] Change webpack code splitting System.import for require.ensure
