@@ -14,8 +14,8 @@ import { type Post } from '../../flow/types';
 
 type Props = {
   posts: Array<Post>,
-  getFetchAllPosts: () => void,
-  selectPost: (id: string) => void
+  getFetchAllPosts: () => Promise<void>,
+  selectPost: (id: string) => string
 }
 
 type State = {
