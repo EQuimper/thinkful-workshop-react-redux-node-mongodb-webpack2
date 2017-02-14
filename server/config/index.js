@@ -1,3 +1,4 @@
+/** @flow */
 import dbConfig from './db';
 import middlewaresConfig from './middlewares';
 
