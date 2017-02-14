@@ -1,10 +1,10 @@
 /** @flow */
-import express from 'express';
+import express, { type $Request, type $Response, type $Application } from 'express';
 import { join } from 'path';
 import { dbConfig, middlewaresConfig } from './config';
 import { PostRoutes } from './modules';
 
-const app = express();
+const app: $Application = express();
 
 const PORT: string | number = process.env.PORT || 3000;
 
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 
   app.use(express.static('dist'));
-  app.get('*', (req: express$Request, res: express$Response) => {
+  app.get('*', (req: $Request, res: $Response) => {
     res.sendFile(join(__dirname, '../dist/index.html'));
   });
 

@@ -1,7 +1,12 @@
 /** @flow */
 import mongoose, { Schema } from 'mongoose';
 
-const PostSchema = new Schema({
+export type PostType = {
+  title: string,
+  text: string
+}
+
+const PostSchema: PostType = new Schema({
   title: {
     type: String,
     unique: true,

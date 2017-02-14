@@ -1,11 +1,11 @@
 /** @flow */
-import Post from './model';
+import { type $Request, type $Response } from 'express';
+import Post, { type PostType } from './model';
 
 /**
 * Create
 */
-export const createPost = async (req: express$Request, res: express$Response) => {
-  // $FlowFixMe
+export const createPost = async (req: $Request, res: $Response) => {
   const { title, text } : { title: string, text: string } = req.body;
 
   if (!title) {
@@ -24,7 +24,7 @@ export const createPost = async (req: express$Request, res: express$Response) =>
     return res.status(401).json({ error: true, message: 'Text must be 30 characters long' });
   }
 
-  const newPost: Post = new Post({ title, text });
+  const newPost: PostType = new Post({ title, text });
 
   try {
     return res.status(200).json({ error: false, post: await newPost.save() });
@@ -36,7 +36,7 @@ export const createPost = async (req: express$Request, res: express$Response) =>
 /**
 * GET ALL
 */
-export const fetchPosts = async (req: express$Request, res: express$Response) => {
+export const fetchPosts = async (req: $Request, res: $Response) => {
   try {
     return res.status(200).json({ error: false, posts: await Post.find({}) });
   } catch (e) {
@@ -47,7 +47,7 @@ export const fetchPosts = async (req: express$Request, res: express$Response) =>
 /**
 * GET BY ID
 */
-export const fetchPostById = async (req: express$Request, res: express$Response) => {
+export const fetchPostById = async (req: $Request, res: $Response) => {
   try {
     return res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
   } catch (e) {
