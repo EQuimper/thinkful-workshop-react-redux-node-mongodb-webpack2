@@ -49,7 +49,7 @@
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "eslint-config-equimper": "^1.3.3",
-    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "extract-text-webpack-plugin": "2",
     "flow-bin": "^0.39.0",
     "flow-typed": "^2.0.0",
     "html-webpack-plugin": "^2.26.0",
@@ -61,9 +61,9 @@
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "supertest": "^3.0.0",
-    "webpack": "2.2",
+    "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dashboard": "^0.2.1",
-    "webpack-dev-server": "2.2"
+    "webpack-dev-server": "^2.3.0"
   }
 }

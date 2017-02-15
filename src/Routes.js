@@ -3,15 +3,8 @@ import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import App from './layout/App';
 
-type Module = {
-  default: Object
-}
-
 const errorLoading = (err: Object): void =>
  console.error('Dynamic page loading failed', err);
-
-const loadRoute = (cb: (err: ?Object, module: Module) => void): Function =>
-  (module: Module) => cb(null, module.default);
 
 const componentRoutes = {
   component: App,
@@ -19,18 +12,24 @@ const componentRoutes = {
   childRoutes: [
     {
       path: '/posts',
-      getComponent(location: string, cb: Function) {
-        System.import('./modules/posts/Posts')
-          .then(loadRoute(cb))
-          .catch(errorLoading);
+      async getComponent(location: string, cb: Function) {
+        try {
+          const module = await import('./modules/posts/Posts');
+          cb(null, module.default);
+        } catch (e) {
+          errorLoading(e);
+        }
       }
     },
     {
       path: '/posts/:id',
-      getComponent(location: string, cb: Function) {
-        System.import('./modules/posts/SinglePost')
-          .then(loadRoute(cb))
-          .catch(errorLoading);
+      async getComponent(location: string, cb: Function) {
+        try {
+          const module = await import('./modules/posts/SinglePost');
+          cb(null, module.default);
+        } catch (e) {
+          errorLoading(e);
+        }
       }
     }
   ]
