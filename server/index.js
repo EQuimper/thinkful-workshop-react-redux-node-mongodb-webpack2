@@ -8,7 +8,15 @@ const app: $Application = express();
 
 const PORT: string | number = process.env.PORT || 3000;
 
+app.use('/manifest.json', express.static('../dist/manifest.json'));
+
 middlewaresConfig(app);
+
+app.get('*.js', (req, res, next) => {
+  req.url = `${req.url}.gz`;
+  res.set('Content-Encoding', 'gzip');
+  next();
+});
 
 app.use('/api/v1', PostRoutes);
 
