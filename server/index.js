@@ -10,6 +10,8 @@ const PORT: string | number = process.env.PORT || 3000;
 
 middlewaresConfig(app);
 
+app.use('/api/v1', PostRoutes);
+
 if (process.env.NODE_ENV !== 'production') {
   /**
   * Database on dev
@@ -31,10 +33,6 @@ if (process.env.NODE_ENV !== 'production') {
     dbConfig(mongoConf);
   }
 }
-
-console.log('APP USE API ROUTES');
-console.log('POST ROUTES', { PostRoutes });
-app.use('/api/v1', [PostRoutes]);
 
 app.listen(PORT, err => {
   if (err) { return console.error(err); }
