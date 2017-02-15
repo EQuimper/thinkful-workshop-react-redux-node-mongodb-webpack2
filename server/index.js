@@ -23,16 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 } else {
   require('dotenv').config();
 
-  const expressStaticGzip = require('express-static-gzip');
-
   app.use(express.static('dist'));
-  app.use('/static', expressStaticGzip('dist/static', {
-    maxAge: 31536000,
-    setHeaders: (res, path, stat) => {
-      res.setHeader('Expires', new Date(Date.now() + 2592000000).toUTCString());
-      return res;
-    }
-  }));
   app.get('*', (req: $Request, res: $Response) => {
     res.sendFile(join(__dirname, '../dist/index.html'));
   });
