@@ -12,7 +12,6 @@ module.exports = {
   entry: {
     bundle: [
       'babel-polyfill',
-      'babel-plugin-transform-flow-strip-types',
       './src/index.js'
     ],
     vendor: VENDOR_LIBS
