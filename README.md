@@ -8,6 +8,39 @@
 - FlowTypes
 - Styled-Component
 
+## Code splitting with React-Router
+
+```js
+const componentRoutes = {
+  component: App,
+  path: '/',
+  childRoutes: [
+    {
+      path: '/posts',
+      async getComponent(location: string, cb: Function) {
+        try {
+          const module = await import('./modules/posts/Posts');
+          cb(null, module.default);
+        } catch (e) {
+          errorLoading(e);
+        }
+      }
+    },
+    {
+      path: '/posts/:id',
+      async getComponent(location: string, cb: Function) {
+        try {
+          const module = await import('./modules/posts/SinglePost');
+          cb(null, module.default);
+        } catch (e) {
+          errorLoading(e);
+        }
+      }
+    }
+  ]
+};
+```
+
 https://salty-falls-54316.herokuapp.com/
 
 ## Want to play with ?
@@ -24,4 +57,4 @@ When install new packages just run `flow-typed install`
 
 ## TODO
 
-- [ ] Change webpack code splitting System.import for require.ensure
+- [x] Change webpack code splitting System.import for import()
