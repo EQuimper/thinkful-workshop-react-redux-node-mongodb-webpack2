@@ -5,7 +5,7 @@
  * already all the info in the state.
  */
 import { createSelector } from 'reselect';
-import { type Post } from '../../flow/types';
+import { type Post } from '../../types/Data';
 
 /**
  * GET THE ARRAY OF POSTS IN THE STATE
