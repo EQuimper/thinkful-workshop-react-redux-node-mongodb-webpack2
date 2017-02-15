@@ -8,9 +8,9 @@
   "scripts": {
     "test": "jest --coverage --watch --colors",
     "start": "cross-env NODE_ENV=production nodemon index.js",
-    "build": "cross-env yarn run clean && NODE_ENV=production webpack -p --progress --config webpack.prod.config.js",
+    "build": "cross-env yarn run clean && NODE_ENV=production webpack -p --progress --profile --colors --config webpack.prod.config.js",
     "clean": "rimraf dist",
-    "dev:c": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.config.js",
+    "dev:c": "cross-env NODE_ENV=development webpack-dev-server --colors --profile --config webpack.dev.config.js",
     "dev:s": "cross-env NODE_ENV=development nodemon index.js"
   },
   "dependencies": {
