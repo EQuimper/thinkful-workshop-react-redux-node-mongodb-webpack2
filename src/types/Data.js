@@ -1,6 +1,7 @@
 /** @flow */
+
 export type Post = {
-  _id: string,
+  title: string,
   text: string,
-  title: string
+  _id: string
 }

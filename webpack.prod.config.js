@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect'
@@ -64,6 +66,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new SWPrecacheWebpackPlugin({
+      staticFileGlobs: [
+      'client/styles.css',
+     ],
+      stripPrefix: 'src/static/',
+      mergeStaticsConfig: true,
+      staticFileGlobsIgnorePatterns: [/\.map$/], // use this to ignore sourcemap files
+    }),
+    new OfflinePlugin()
   ]
 };
