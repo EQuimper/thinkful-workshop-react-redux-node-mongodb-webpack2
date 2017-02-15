@@ -38,8 +38,14 @@ module.exports = {
         test: /\.css$/
       },
       {
-        test: /\.(jpg|png|ico)$/,
-        loader: 'file?name=static/images/[name].[ext]'
+        test: /\.(jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: { limit: 40000 }
+          },
+          'image-webpack-loader' // first one append
+        ]
       },
       {
         test: /manifest.json$/,
