@@ -1,13 +1,11 @@
 {
   "extends": "equimper",
-  "plugins": [
-    "flowtype",
-    "flowtype-errors"
-  ],
   "rules": {
-    "flowtype/define-flow-type": 1,
-    "flowtype/use-flow-type": 1,
-    "flowtype-errors/show-errors": 2,
-    "react/sort-comp": 0
+    "react/sort-comp": 0,
+    "no-duplicate-imports": 0
+  },
+  "globals": {
+    "beforeEach": false,
+    "afterEach": false
   }
 }

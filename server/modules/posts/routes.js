@@ -1,7 +1,8 @@
+/** @flow */
 import { Router } from 'express';
 import * as PostController from './controller';
 
-const routes = new Router();
+const routes: Router = new Router();
 
 routes.route('/posts').post(PostController.createPost);
 routes.route('/posts').get(PostController.fetchPosts);

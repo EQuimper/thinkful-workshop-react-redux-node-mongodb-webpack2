@@ -1,6 +1,7 @@
+/** @flow */
 import mongoose from 'mongoose';
 
-export default conf => {
+export default (conf: string) => {
   mongoose.Promise = global.Promise;
   mongoose.connect(conf);
   mongoose.connection

@@ -10,17 +10,12 @@ import Card from '../../components/Card';
 import LoadingScreen from '../../components/LoadingScreen';
 import Button from '../../components/Button';
 import { getFetchAllPosts, selectPost } from './actions';
-
-type Post = {
-  title: string,
-  text: string,
-  _id: string
-}
+import { type Post } from '../../flow/types';
 
 type Props = {
   posts: Array<Post>,
-  getFetchAllPosts: () => void,
-  selectPost: (id: string) => void
+  getFetchAllPosts: () => Promise<void>,
+  selectPost: (id: string) => string
 }
 
 type State = {
@@ -33,10 +28,7 @@ type State = {
   }),
   { getFetchAllPosts, selectPost }
 )
-class Posts extends Component {
-  props: Props;
-  state: State;
-
+class Posts extends Component<void, Props, State> {
   state = { loading: true }
 
   componentDidMount() {

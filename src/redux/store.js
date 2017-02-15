@@ -1,10 +1,11 @@
+/** @flow */
 import { applyMiddleware, compose, createStore } from 'redux';
 // import promiseMiddleware from 'redux-promise-middleware';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-let middlewares = [thunk];
+let middlewares: Array<Function> = [thunk];
 
 if (process.env.NODE_ENV !== 'production') {
   middlewares = [...middlewares, logger()];

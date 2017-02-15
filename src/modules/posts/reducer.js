@@ -4,7 +4,8 @@ import {
   FETCH_SINGLE_POST,
   FETCH_SINGLE_POST_ERROR,
   SELECTED_POST
-} from './actions';
+} from './actionsTypes';
+import { type Post } from '../../flow/types';
 
 type State = {
   posts: Array<Object>,
@@ -20,7 +21,14 @@ const INITIAL_STATE = {
   error: false
 };
 
-export default (state: State = INITIAL_STATE, action: Object): Object => {
+type Action = {
+  type: 'FETCH_ALL_POSTS' | 'FETCH_SINGLE_POST' | 'FETCH_SINGLE_POST_ERROR' | 'SELECTED_POST',
+  posts: Array<Post>,
+  post: Post,
+  id: string
+}
+
+export default (state: State = INITIAL_STATE, action: Action): Object => {
   switch (action.type) {
     case FETCH_ALL_POSTS:
       return {

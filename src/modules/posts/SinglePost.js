@@ -9,23 +9,23 @@ import { getFetchSinglePost } from './actions';
 import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
 import SinglePostSelector from './single_post_selector';
-
-type Post = {
-  title: string,
-  text: string
-}
+import { type Post } from '../../flow/types';
 
 type Props = {
   post: Array<Post>,
-  postDomains: Object,
+  postDomains: {
+    post: Post
+  },
   getFetchSinglePost: (id: string) => void,
-  params: Object
+  params: {
+    id: string
+  }
 }
 
 type State = {
   loading: boolean,
   error: boolean,
-  post: Object
+  post: ?Post
 }
 
 @connect(
@@ -35,14 +35,11 @@ type State = {
   }),
   { getFetchSinglePost }
 )
-class SinglePost extends Component {
-  props: Props;
-  state: State;
-
+class SinglePost extends Component<void, Props, State> {
   state = {
     loading: true,
     error: false,
-    post: {}
+    post: null
   }
 
   componentDidMount() {

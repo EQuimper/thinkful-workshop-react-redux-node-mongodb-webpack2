@@ -1,30 +1,36 @@
 /** @flow */
 import { PostApi } from '../../helpers/api';
+import {
+  FETCH_ALL_POSTS,
+  FETCH_SINGLE_POST,
+  FETCH_SINGLE_POST_ERROR,
+  SELECTED_POST,
+  type FetchAllPostsAction,
+  type FetchPostAction,
+  type FetchSinglePostErrorAction,
+  type SelectPostAction
+} from './actionsTypes';
+import { type Post } from '../../flow/types';
 
-const postApi = new PostApi();
-
-export const FETCH_ALL_POSTS: string = 'FETCH_ALL_POSTS';
-export const FETCH_SINGLE_POST: string = 'FETCH_SINGLE_POST';
-export const FETCH_SINGLE_POST_ERROR: string = 'FETCH_SINGLE_POST_ERROR';
-export const SELECTED_POST: string = 'SELECTED_POST';
+const postApi: PostApi = new PostApi();
 
 /**
  * FETCH ALL POSTS
  */
-const fetchAllPosts = (posts: Array<Object>) => ({
+const fetchAllPosts = (posts: Array<Post>): FetchAllPostsAction => ({
   type: FETCH_ALL_POSTS,
   posts
 });
 
-export const getFetchAllPosts = () => async (dispatch: Function) => {
-  const { posts }: { posts: Array<Object> } = await postApi.fetchPosts();
+export const getFetchAllPosts = () => async (dispatch: () => void): Promise<void> => {
+  const { posts }: { posts: Array<Post> } = await postApi.fetchPosts();
   return dispatch(fetchAllPosts(posts));
 };
 
 /**
  * FETCH SINGLE POST WITH HIS ID
  */
-const fetchPost = (post: Object) => ({
+const fetchPost = (post: Post): FetchPostAction => ({
   type: FETCH_SINGLE_POST,
   post
 });
@@ -32,12 +38,12 @@ const fetchPost = (post: Object) => ({
 /**
  * WHEN FETCH RECEIVE AN ERROR
  */
-const fetchPostError = () => ({
+const fetchPostError = (): FetchSinglePostErrorAction => ({
   type: FETCH_SINGLE_POST_ERROR
 });
 
-export const getFetchSinglePost = (id: string) => async (dispatch: Function) => {
-  const { post }: { post: Object } = await postApi.fetchSinglePost(id);
+export const getFetchSinglePost = (id: string) => async (dispatch: () => void): Promise<void> => {
+  const { post }: { post: Post } = await postApi.fetchSinglePost(id);
   if (!post) {
     return dispatch(fetchPostError());
   }
@@ -47,7 +53,7 @@ export const getFetchSinglePost = (id: string) => async (dispatch: Function) => 
 /**
  * SELECTED ID FOR RESELECT
  */
-export const selectPost = (id: string) => ({
+export const selectPost = (id: string): SelectPostAction => ({
   type: SELECTED_POST,
   id
 });

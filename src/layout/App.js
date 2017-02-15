@@ -7,11 +7,11 @@ import ContainerFluidCenter from '../components/ContainerFluidCenter';
 
 type Props = {
   location: Object,
-  children: React$Element<*>
+  children?: React.Element<*>
 }
 
 const App = ({ children, location }: Props) => {
-  const _goToPosts: Function = () => browserHistory.push('/posts');
+  const _goToPosts = (): () => void => browserHistory.push('/posts');
 
   const _renderWithoutChildren = () => (
     <ContainerFluidCenter>
