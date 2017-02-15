@@ -1,6 +1,11 @@
+/** @flow */
 import { combineReducers } from 'redux';
 import PostsReducer from '../modules/posts/reducer';
 
-export default combineReducers({
+const reducers = {
   posts: PostsReducer
-});
+};
+
+export type Reducers = typeof reducers;
+
+export default combineReducers(reducers);
