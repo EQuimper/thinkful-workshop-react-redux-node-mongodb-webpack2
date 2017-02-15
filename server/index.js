@@ -8,7 +8,7 @@ const app: $Application = express();
 
 const PORT: string | number = process.env.PORT || 3000;
 
-app.use('/manifest.json', express.static('dist/manifest.json'));
+app.use('/manifest.json', express.static('../src/manifest.json'));
 
 middlewaresConfig(app);
 
