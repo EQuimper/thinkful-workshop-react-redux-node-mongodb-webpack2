@@ -25,8 +25,8 @@ if (process.env.NODE_ENV !== 'production') {
 
   const expressStaticGzip = require('express-static-gzip');
 
-  app.use(express.static('../dist'));
-  app.use('/static', expressStaticGzip('../dist/static', {
+  app.use(express.static('dist'));
+  app.use('/static', expressStaticGzip('dist/static', {
     maxAge: 31536000,
     setHeaders: (res, path, stat) => {
       res.setHeader('Expires', new Date(Date.now() + 2592000000).toUTCString());
