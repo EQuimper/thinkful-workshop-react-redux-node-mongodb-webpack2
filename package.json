@@ -47,6 +47,7 @@
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "chunk-manifest-webpack-plugin": "^1.0.0",
+    "compression-webpack-plugin": "^0.3.2",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "eslint-config-equimper": "^1.3.3",

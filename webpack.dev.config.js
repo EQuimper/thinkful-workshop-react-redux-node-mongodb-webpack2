@@ -37,11 +37,19 @@ module.exports = {
           loader: 'css-loader'
         }),
         test: /\.css$/
+      },
+      {
+        test: /\.(jpg|png|ico)$/,
+        loader: 'file?name=static/images/[name].[ext]'
+      },
+      {
+        test: /manifest.json$/,
+        loader: 'file?name=manifest.json'
       }
     ]
   },
   devServer: {
-    contentBase: join(__dirname, 'dist'),
+    contentBase: join(__dirname, './dist'),
     port: 9000,
     hot: true,
     historyApiFallback: true,
