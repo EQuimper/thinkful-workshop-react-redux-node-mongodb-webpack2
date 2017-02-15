@@ -7,6 +7,8 @@
 - Webpack2
 - FlowTypes
 - Styled-Component
+- Service-Worker
+- App Caching
 
 ## Code splitting with React-Router
 
