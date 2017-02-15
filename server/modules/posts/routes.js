@@ -2,6 +2,7 @@
 import { Router } from 'express';
 import * as PostController from './controller';
 
+console.log('IM IN THE POSTS ROUTES');
 const routes: Router = new Router();
 
 routes.route('/posts').post(PostController.createPost);

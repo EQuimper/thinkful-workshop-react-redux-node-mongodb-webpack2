@@ -32,7 +32,8 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-app.use('/api/v1', PostRoutes);
+console.log('APP USE API ROUTES');
+app.use('/api/v1', [PostRoutes]);
 
 app.listen(PORT, err => {
   if (err) { return console.error(err); }
