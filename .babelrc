@@ -3,6 +3,7 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-decorators-legacy",
+    "syntax-flow",
     "transform-flow-strip-types",
     "syntax-dynamic-import"
   ],
