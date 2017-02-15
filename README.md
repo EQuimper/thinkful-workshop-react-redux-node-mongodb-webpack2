@@ -58,3 +58,4 @@ When install new packages just run `flow-typed install`
 ## TODO
 
 - [x] Change webpack code splitting System.import for import()
+- [ ] Get smaller bundle
