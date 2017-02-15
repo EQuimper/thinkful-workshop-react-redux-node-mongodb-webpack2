@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ChunkManifestPlugin = require("chunk-manifest-webpack-plugin")
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect'
@@ -13,6 +12,7 @@ module.exports = {
   entry: {
     bundle: [
       'babel-polyfill',
+      'babel-plugin-transform-flow-strip-types',
       './src/index.js'
     ],
     vendor: VENDOR_LIBS
