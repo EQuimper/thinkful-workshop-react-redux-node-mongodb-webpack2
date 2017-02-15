@@ -4,14 +4,6 @@
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/",
-  "colors": {
-    "frame" : [71, 105, 91],
-    "toolbar" : [207, 221, 192],
-    "ntp_text" : [20, 40, 0],
-    "ntp_link" : [36, 70, 0],
-    "ntp_section" : [207, 221, 192],
-    "button_background" : [255, 255, 255]
-  },
   "icons": [
     {
       "src": "./images/96.png",
@@ -29,6 +21,6 @@
       "type": "image/png"
     }
   ],
-  "background_color": "#171717",
-  "theme_color": "#171717"
+  "background_color": "#6799FF",
+  "theme_color": "#6799FF"
 }
