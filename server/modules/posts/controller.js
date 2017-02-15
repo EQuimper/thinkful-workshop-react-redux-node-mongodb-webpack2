@@ -37,9 +37,12 @@ export const createPost = async (req: $Request, res: $Response) => {
 * GET ALL
 */
 export const fetchPosts = async (req: $Request, res: $Response) => {
+  console.log('TRY TO FETCH');
   try {
+    console.log('IM IN THE TRY');
     return res.status(200).json({ error: false, posts: await Post.find({}) });
   } catch (e) {
+    console.log('ERROR', e);
     return res.status(500).json({ error: false, message: 'Error server' });
   }
 };
