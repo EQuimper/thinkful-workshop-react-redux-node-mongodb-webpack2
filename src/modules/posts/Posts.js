@@ -10,7 +10,7 @@ import Card from '../../components/Card';
 import LoadingScreen from '../../components/LoadingScreen';
 import Button from '../../components/Button';
 import { getFetchAllPosts, selectPost } from './actions';
-import { type Post } from '../../flow/types';
+import { type Post } from '../../types/Data';
 
 type Props = {
   posts: Array<Post>,
