@@ -8,6 +8,8 @@ const app: $Application = express();
 
 const PORT: string | number = process.env.PORT || 3000;
 
+app.use('/manifest.json', express.static('dist/manifest.json'));
+
 middlewaresConfig(app);
 
 app.use('/api/v1', PostRoutes);
@@ -22,7 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 
   app.use(express.static('dist'));
-  app.use('/manifest.json', join(__dirname, '../dist/manifest.json'));
   app.get('*', (req: $Request, res: $Response) => {
     res.sendFile(join(__dirname, '../dist/index.html'));
   });
