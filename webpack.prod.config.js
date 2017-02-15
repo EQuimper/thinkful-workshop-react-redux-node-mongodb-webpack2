@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ChunkManifestPlugin = require("chunk-manifest-webpack-plugin")
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect'
@@ -48,7 +49,12 @@ module.exports = {
       debug: false
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['vendor', 'manifest'],
+      minChunks: Infinity
+    }),
+    new ChunkManifestPlugin({
+      filename: 'chunk-manifest.json',
+      manifestVariable: 'webpackManifest'
     }),
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({

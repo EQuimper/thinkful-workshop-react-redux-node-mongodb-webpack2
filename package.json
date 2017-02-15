@@ -45,6 +45,7 @@
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-env": "^1.1.8",
+    "chunk-manifest-webpack-plugin": "^1.0.0",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "eslint-config-equimper": "^1.3.3",
