@@ -12,11 +12,9 @@
 
 ## PWA TEST
 
-![](http://i.imgur.com/9Y4UYJF.png)
+![](http://i.imgur.com/8UCFean.png)
 
-JSON test if you want to see https://github.com/EQuimper/thinkful-workshop-react-redux-node-mongodb-webpack2/blob/master/PWA-test.json
-
-The test link https://googlechrome.github.io/lighthouse/viewer/?gist=7dd020230f1ee2d1e03bcf8abbc23196
+The test link https://googlechrome.github.io/lighthouse/viewer/?gist=66a00c9974e7b3bb4ba1fed1cf0c07cf
 
 ## Theme Color on Chrome for Android
 
