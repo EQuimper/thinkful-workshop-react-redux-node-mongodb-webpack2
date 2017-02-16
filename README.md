@@ -60,4 +60,6 @@ When install new packages just run `flow-typed install`
 ## TODO
 
 - [x] Change webpack code splitting System.import for import()
+- [x] Add service worker
+- [x] Add offline caching
 - [ ] Get smaller bundle
