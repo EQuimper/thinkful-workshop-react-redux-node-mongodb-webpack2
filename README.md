@@ -114,7 +114,7 @@ export type Action =
   | SelectPostAction
 ```
 
-https://salty-falls-54316.herokuapp.com/
+https://thinkful-workshop-webpack2-node-react.now.sh/
 
 ## Want to play with ?
 
