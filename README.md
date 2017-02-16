@@ -134,7 +134,7 @@ For deploy I'm using [Now from Zeit](https://zeit.co/now) Who provided free host
 
 ```
 now secret add mongodb <urlinkhere>
-``
+```
 
 Inside the `packages.json` I have alias this is for change the name from now.
 
