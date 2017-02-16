@@ -1,0 +1,2076 @@
+{
+  "lighthouseVersion": "1.5.2",
+  "generatedTime": "2017-02-16T15:51:22.814Z",
+  "initialUrl": "https://salty-falls-54316.herokuapp.com/",
+  "url": "https://salty-falls-54316.herokuapp.com/",
+  "audits": {
+    "is-on-https": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "is-on-https",
+      "category": "Security",
+      "description": "Uses HTTPS",
+      "helpText": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/https)."
+    },
+    "redirects-http": {
+      "score": false,
+      "displayValue": "",
+      "rawValue": false,
+      "name": "redirects-http",
+      "category": "Security",
+      "description": "Redirects HTTP traffic to HTTPS",
+      "helpText": "If you've already set up HTTPS, make sure that you redirect all HTTP traffic to HTTPS. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http-redirects-to-https)."
+    },
+    "service-worker": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "service-worker",
+      "category": "Offline",
+      "description": "Registers a Service Worker",
+      "helpText": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/registered-service-worker)."
+    },
+    "works-offline": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "works-offline",
+      "category": "Offline",
+      "description": "Responds with a 200 when offline",
+      "helpText": "If you're building a Progressive Web App, consider using a service worker so that your app can work offline. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http-200-when-offline)."
+    },
+    "viewport": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "",
+      "name": "viewport",
+      "category": "Mobile Friendly",
+      "description": "Has a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+      "helpText": "Add a viewport meta tag to optimize your app for mobile screens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/has-viewport-meta-tag)."
+    },
+    "manifest-display": {
+      "score": true,
+      "displayValue": "standalone",
+      "rawValue": true,
+      "name": "manifest-display",
+      "category": "Manifest",
+      "description": "Manifest's `display` property is set",
+      "helpText": "Set the `display` property to specify how your app launches from the homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-has-display-set)."
+    },
+    "without-javascript": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "without-javascript",
+      "category": "JavaScript",
+      "description": "Contains some content when JavaScript is not available",
+      "helpText": "Your app should display some content when JavaScript is disabled, even if it's just a warning to the user that JavaScript is required to use the app. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/no-js)."
+    },
+    "first-meaningful-paint": {
+      "score": 99,
+      "displayValue": "1188.1ms",
+      "rawValue": 1188.1,
+      "optimalValue": "1,600ms",
+      "extendedInfo": {
+        "value": {
+          "timestamps": {
+            "navStart": 66264488264,
+            "fCP": 66265676365,
+            "fMP": 66265676372
+          },
+          "timings": {
+            "navStart": 0,
+            "fCP": 1188.101,
+            "fMP": 1188.108
+          }
+        },
+        "formatter": "null"
+      },
+      "name": "first-meaningful-paint",
+      "category": "Performance",
+      "description": "First meaningful paint",
+      "helpText": "First meaningful paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint)."
+    },
+    "speed-index-metric": {
+      "score": 98,
+      "displayValue": "1205",
+      "rawValue": 1205,
+      "optimalValue": "1,250",
+      "extendedInfo": {
+        "formatter": "speedline",
+        "value": {
+          "timings": {
+            "firstVisualChange": 1204,
+            "visuallyComplete": 1204,
+            "speedIndex": 1204.914999999106,
+            "perceptualSpeedIndex": 1204.914999999106
+          },
+          "timestamps": {
+            "firstVisualChange": 66265682634,
+            "visuallyComplete": 66265682634,
+            "speedIndex": 66265683549,
+            "perceptualSpeedIndex": 66265683549
+          },
+          "frames": [
+            {
+              "timestamp": 66264478.634,
+              "progress": 29.58881964938648
+            },
+            {
+              "timestamp": 66264798.623,
+              "progress": 0
+            },
+            {
+              "timestamp": 66264818.157,
+              "progress": 0
+            },
+            {
+              "timestamp": 66264861.939,
+              "progress": 0
+            },
+            {
+              "timestamp": 66265019.096,
+              "progress": 29.58881964938648
+            },
+            {
+              "timestamp": 66265683.549,
+              "progress": 100.00000000000001
+            }
+          ]
+        }
+      },
+      "name": "speed-index-metric",
+      "category": "Performance",
+      "description": "Perceptual Speed Index",
+      "helpText": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/speed-index)."
+    },
+    "estimated-input-latency": {
+      "score": 100,
+      "displayValue": "33.1ms",
+      "rawValue": 33.1,
+      "optimalValue": "50ms",
+      "extendedInfo": {
+        "value": [
+          {
+            "percentile": 0.5,
+            "time": 16
+          },
+          {
+            "percentile": 0.75,
+            "time": 16
+          },
+          {
+            "percentile": 0.9,
+            "time": 33.11135000009847
+          },
+          {
+            "percentile": 0.99,
+            "time": 100.7253700000199
+          },
+          {
+            "percentile": 1,
+            "time": 108.77400000000023
+          }
+        ],
+        "formatter": "null"
+      },
+      "name": "estimated-input-latency",
+      "category": "Performance",
+      "description": "Estimated Input Latency",
+      "helpText": "The score above is an estimate of how long your app takes to respond to user input, in milliseconds. There is a 90% probability that a user encounters this amount of latency, or less. 10% of the time a user can expect additional latency. If your score is higher than Lighthouse's target score, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)."
+    },
+    "time-to-interactive": {
+      "score": 99,
+      "displayValue": "1245.3ms",
+      "rawValue": 1245.3,
+      "optimalValue": "5,000ms",
+      "extendedInfo": {
+        "value": {
+          "timings": {
+            "fMP": 1188.1,
+            "visuallyReady": 1195.285,
+            "timeToInteractive": 1245.285
+          },
+          "timestamps": {
+            "fMP": 66265676372,
+            "visuallyReady": 66265683549,
+            "timeToInteractive": 66265733549
+          },
+          "expectedLatencyAtTTI": 29.992,
+          "foundLatencies": [
+            {
+              "estLatency": 58.77400000000006,
+              "startTime": "1195.3"
+            },
+            {
+              "estLatency": 29.991999995529625,
+              "startTime": "1245.3"
+            }
+          ]
+        },
+        "formatter": "null"
+      },
+      "name": "time-to-interactive",
+      "category": "Performance",
+      "description": "Time To Interactive (alpha)",
+      "helpText": "Time to Interactive identifies the time at which your app appears to be ready enough to interact with. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive)."
+    },
+    "user-timings": {
+      "score": true,
+      "displayValue": "0",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "userTimings",
+        "value": []
+      },
+      "name": "user-timings",
+      "category": "Performance",
+      "description": "User Timing marks and measures",
+      "helpText": "Consider instrumenting your app with the User Timing API to create custom, real-world measurements of key user experiences. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/user-timing)."
+    },
+    "critical-request-chains": {
+      "score": false,
+      "displayValue": "5",
+      "rawValue": false,
+      "optimalValue": 0,
+      "extendedInfo": {
+        "formatter": "criticalRequestChains",
+        "value": {
+          "29189.138": {
+            "request": {
+              "url": "https://salty-falls-54316.herokuapp.com/",
+              "startTime": 66264.491322,
+              "endTime": 66264.648474,
+              "responseReceivedTime": 66264.645901,
+              "transferSize": 951
+            },
+            "children": {
+              "29189.140": {
+                "request": {
+                  "url": "https://salty-falls-54316.herokuapp.com/style.css",
+                  "startTime": 66264.653552,
+                  "endTime": 66264.819632,
+                  "responseReceivedTime": 66264.817941,
+                  "transferSize": 940
+                },
+                "children": {}
+              },
+              "29189.141": {
+                "request": {
+                  "url": "https://salty-falls-54316.herokuapp.com/manifest.1a726734ac6ce3dfd56e.js",
+                  "startTime": 66264.653888,
+                  "endTime": 66264.826471,
+                  "responseReceivedTime": 66264.824785,
+                  "transferSize": 1277
+                },
+                "children": {}
+              },
+              "29189.139": {
+                "request": {
+                  "url": "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css",
+                  "startTime": 66264.653112,
+                  "endTime": 66264.834757,
+                  "responseReceivedTime": 66264.832056,
+                  "transferSize": 1113
+                },
+                "children": {}
+              },
+              "29189.143": {
+                "request": {
+                  "url": "https://salty-falls-54316.herokuapp.com/bundle.c295a60f19bc15293fea.js",
+                  "startTime": 66264.654609,
+                  "endTime": 66265.219238,
+                  "responseReceivedTime": 66264.846248,
+                  "transferSize": 39114
+                },
+                "children": {}
+              },
+              "29189.142": {
+                "request": {
+                  "url": "https://salty-falls-54316.herokuapp.com/vendor.7b4ec235dbbcae02b33e.js",
+                  "startTime": 66264.654185,
+                  "endTime": 66265.456176,
+                  "responseReceivedTime": 66264.83907,
+                  "transferSize": 90022
+                },
+                "children": {}
+              }
+            }
+          }
+        }
+      },
+      "name": "critical-request-chains",
+      "category": "Performance",
+      "description": "Critical Request Chains",
+      "helpText": "The Critical Request Chains below show you what resources are required for first render of this page. Improve page load by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/critical-request-chains)."
+    },
+    "manifest-exists": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "manifest-exists",
+      "category": "Manifest",
+      "description": "Manifest exists",
+      "helpText": "The web app manifest is the technology that enables users to add your web app to their homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-exists)."
+    },
+    "manifest-background-color": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "value": "#6799FF",
+        "formatter": "null"
+      },
+      "name": "manifest-background-color",
+      "category": "Manifest",
+      "description": "Manifest contains `background_color`",
+      "helpText": "When your app launches from a user's homescreen, the browser uses `background_color` to paint the background of the browser while your app loads for a smooth transition experience. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-background_color)."
+    },
+    "manifest-theme-color": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "manifest-theme-color",
+      "category": "Manifest",
+      "description": "Manifest contains `theme_color`",
+      "helpText": "Add a `theme_color` to set the color of the browser's address bar. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-theme_color)."
+    },
+    "manifest-icons-min-192": {
+      "score": true,
+      "displayValue": "found sizes: 192x192",
+      "rawValue": true,
+      "name": "manifest-icons-min-192",
+      "category": "Manifest",
+      "description": "Manifest contains icons at least 192px",
+      "helpText": "A 192px icon ensures that your app's icon displays well on the homescreens of the largest mobile devices. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-192px-icon)."
+    },
+    "manifest-icons-min-144": {
+      "score": true,
+      "displayValue": "found sizes: 144x144, 192x192",
+      "rawValue": true,
+      "name": "manifest-icons-min-144",
+      "category": "Manifest",
+      "description": "Manifest contains icons at least 144px"
+    },
+    "manifest-name": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "manifest-name",
+      "category": "Manifest",
+      "description": "Manifest contains `name`",
+      "helpText": "The `name` property identifies your app and is required. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-name)."
+    },
+    "manifest-short-name": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "manifest-short-name",
+      "category": "Manifest",
+      "description": "Manifest contains `short_name`",
+      "helpText": "The `short_name` property is a requirement for Add To Homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-short_name)."
+    },
+    "manifest-short-name-length": {
+      "score": false,
+      "displayValue": "",
+      "rawValue": false,
+      "debugString": "12 chars is the suggested maximum homescreen label length (Found: 17 chars).",
+      "name": "manifest-short-name-length",
+      "category": "Manifest",
+      "description": "Manifest's `short_name` won't be truncated when displayed on homescreen",
+      "helpText": "Make your app's `short_name` less than 12 characters to ensure that it's not truncated on homescreens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-short_name-is-not-truncated)."
+    },
+    "manifest-start-url": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "name": "manifest-start-url",
+      "category": "Manifest",
+      "description": "Manifest contains `start_url`",
+      "helpText": "Add a `start_url` to instruct the browser to launch a specific URL whenever your app is launched from a homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-start_url)."
+    },
+    "theme-color-meta": {
+      "score": true,
+      "displayValue": "#6799FF",
+      "rawValue": true,
+      "name": "theme-color-meta",
+      "category": "HTML",
+      "description": "Has a `<meta name=\"theme-color\">` tag"
+    },
+    "unused-css-rules": {
+      "score": false,
+      "displayValue": "2KB (~10ms) potential savings",
+      "rawValue": false,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [
+            {
+              "url": "5.0.0/normalize.min.css",
+              "numUnused": 36,
+              "wastedBytes": 1027,
+              "totalKb": "1 KB",
+              "potentialSavings": "92%"
+            },
+            {
+              "url": "/style.css",
+              "numUnused": 9,
+              "wastedBytes": 846,
+              "totalKb": "1 KB",
+              "potentialSavings": "90%"
+            },
+            {
+              "url": "*inline*```.dvVfKS { \n  font-size: 1.5em;\n  text-align: center;\n  color: blue;\n} ...```",
+              "numUnused": 1,
+              "wastedBytes": 92,
+              "totalKb": "0 KB",
+              "potentialSavings": "25%"
+            },
+            {
+              "url": "*inline*```/* Copyright 2014 Evernote Corporation. All rights reserved. */\n.en-markup-crop-options {\n  top: 18p... } ...```",
+              "numUnused": 2,
+              "wastedBytes": 128,
+              "totalKb": "0 KB",
+              "potentialSavings": "100%"
+            }
+          ],
+          "tableHeadings": {
+            "url": "URL",
+            "numUnused": "Unused Rules",
+            "totalKb": "Original (KB)",
+            "potentialSavings": "Potential Savings (%)"
+          }
+        }
+      },
+      "name": "unused-css-rules",
+      "category": "CSS",
+      "description": "Uses 90% of its CSS rules",
+      "helpText": "Remove unused rules from stylesheets to reduce unnecessary bytes consumed by network activity. [Learn more](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)"
+    },
+    "content-width": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "",
+      "name": "content-width",
+      "category": "Mobile Friendly",
+      "description": "Content is sized correctly for the viewport",
+      "helpText": "If the width of your app's content doesn't match the width of the viewport, your app might not be optimized for mobile screens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/content-sized-correctly-for-viewport)."
+    },
+    "deprecations": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
+      "name": "deprecations",
+      "category": "Deprecations",
+      "description": "Avoids deprecated APIs",
+      "helpText": "We found some uses of deprecated APIs. Please consider migrating to a newer option. [Learn more](https://www.chromestatus.com/features#deprecated)."
+    },
+    "aria-allowed-attr": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "aria-allowed-attr",
+      "category": "Accessibility",
+      "description": "Element aria-* attributes are allowed for this role",
+      "helpText": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/aria-allowed-attributes)."
+    },
+    "aria-required-attr": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "aria-required-attr",
+      "category": "Accessibility",
+      "description": "Elements with ARIA roles have the required aria-* attributes",
+      "helpText": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/required-aria-attributes)."
+    },
+    "aria-valid-attr-value": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "aria-valid-attr-value",
+      "category": "Accessibility",
+      "description": "Element aria-* attributes have valid values",
+      "helpText": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid values. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/valid-aria-values)."
+    },
+    "aria-valid-attr": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "aria-valid-attr",
+      "category": "Accessibility",
+      "description": "Element aria-* attributes are valid and not misspelled or non-existent.",
+      "helpText": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/valid-aria-attributes)."
+    },
+    "color-contrast": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "color-contrast",
+      "category": "Accessibility",
+      "description": "Background and foreground colors have a sufficient contrast ratio",
+      "helpText": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/contrast-ratio)."
+    },
+    "image-alt": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "image-alt",
+      "category": "Accessibility",
+      "description": "Every image element has an alt attribute",
+      "helpText": "Screen reader users rely on `alt` text to provide descriptions of images. It's also used as fallback content when an image fails to load. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/alt-attribute)."
+    },
+    "label": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "label",
+      "category": "Accessibility",
+      "description": "Every form element has a label",
+      "helpText": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/form-labels)."
+    },
+    "tabindex": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "accessibility"
+      },
+      "name": "tabindex",
+      "category": "Accessibility",
+      "description": "No element has a `tabindex` attribute greater than 0",
+      "helpText": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/tabindex)."
+    },
+    "external-anchors-use-rel-noopener": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
+      "name": "external-anchors-use-rel-noopener",
+      "category": "Performance",
+      "description": "Opens external anchors using rel=\"noopener\"",
+      "helpText": "Open new tabs using `rel=\"noopener\"` to improve performance and prevent security vulnerabilities. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/noopener)."
+    },
+    "appcache-manifest": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "",
+      "name": "appcache-manifest",
+      "category": "Offline",
+      "description": "Avoids Application Cache",
+      "helpText": "Application Cache has been [deprecated](https://html.spec.whatwg.org/multipage/browsers.html#offline) by [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers). Consider implementing an offline solution using the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)."
+    },
+    "geolocation-on-start": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
+      "name": "geolocation-on-start",
+      "category": "UX",
+      "description": "Avoids requesting the geolocation permission on page load",
+      "helpText": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to user gestures instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/geolocation-on-load)."
+    },
+    "link-blocking-first-paint": {
+      "score": false,
+      "displayValue": "2 resources delayed first paint by 159ms",
+      "rawValue": false,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [
+            {
+              "url": "5.0.0/normalize.min.css",
+              "totalKb": "1 KB",
+              "totalMs": "159ms"
+            },
+            {
+              "url": "/style.css",
+              "totalKb": "0 KB",
+              "totalMs": "5ms"
+            }
+          ],
+          "tableHeadings": {
+            "url": "URL",
+            "totalKb": "Size (KB)",
+            "totalMs": "Delayed Paint By (ms)"
+          }
+        }
+      },
+      "name": "link-blocking-first-paint",
+      "category": "Performance",
+      "description": "Avoids `<link>` that delay first paint",
+      "helpText": "Link elements are blocking the first paint of your page. Consider inlining critical links and deferring non-critical ones. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
+    },
+    "no-console-time": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "url": "URL",
+            "lineCol": "Line/Col",
+            "isEval": "Eval'd?"
+          }
+        }
+      },
+      "name": "no-console-time",
+      "category": "JavaScript",
+      "description": "Avoids `console.time()` in its own scripts",
+      "helpText": "Consider using `performance.mark()` and `performance.measure()` from the User Timing API instead. They provide high-precision timestamps, independent of the system clock, and are integrated in the Chrome DevTools Timeline. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/console-time)."
+    },
+    "no-datenow": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "url": "URL",
+            "lineCol": "Line/Col",
+            "isEval": "Eval'd?"
+          }
+        }
+      },
+      "name": "no-datenow",
+      "category": "JavaScript",
+      "description": "Avoids `Date.now()` in its own scripts",
+      "helpText": "Consider using `performance.now()` from the User Timing API instead. It provides high-precision timestamps, independent of the system clock. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/date-now)."
+    },
+    "no-document-write": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
+      "name": "no-document-write",
+      "category": "Performance",
+      "description": "Avoids `document.write()`",
+      "helpText": "For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/document-write)."
+    },
+    "no-mutation-events": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "Lighthouse was unable to determine the URL of some script executions. It's possible a Chrome extension or other eval'd code is the source.",
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "url": "URL",
+            "lineCol": "Line/Col",
+            "type": "Event",
+            "code": "Snippet"
+          }
+        }
+      },
+      "name": "no-mutation-events",
+      "category": "JavaScript",
+      "description": "Avoids Mutation Events in its own scripts",
+      "helpText": "Mutation Events are deprecated and harm performance. Consider using Mutation Observers instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/mutation-events)."
+    },
+    "no-old-flexbox": {
+      "score": false,
+      "displayValue": "",
+      "rawValue": false,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [
+            {
+              "url": "inline",
+              "location": "2:23",
+              "startLine": 10,
+              "pre": ".clvuob {\n  display: -webkit-box;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:20",
+              "startLine": 11,
+              "pre": ".clvuob {\n  display: -moz-box;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:23",
+              "startLine": 12,
+              "pre": ".clvuob {\n  display: -ms-flexbox;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:23",
+              "startLine": 29,
+              "pre": ".jqznYz {\n  display: -webkit-box;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:20",
+              "startLine": 30,
+              "pre": ".jqznYz {\n  display: -moz-box;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:23",
+              "startLine": 31,
+              "pre": ".jqznYz {\n  display: -ms-flexbox;\n}"
+            },
+            {
+              "url": "inline",
+              "location": "2:31",
+              "startLine": 44,
+              "pre": ".jqznYz {\n  -webkit-box-orient: vertical;\n}"
+            }
+          ],
+          "tableHeadings": {
+            "url": "URL",
+            "startLine": "Line in the stylesheet / <style>",
+            "location": "Column start/end",
+            "pre": "Snippet"
+          }
+        }
+      },
+      "name": "no-old-flexbox",
+      "category": "CSS",
+      "description": "Avoids old CSS flexbox",
+      "helpText": "The 2009 spec of Flexbox is deprecated and is 2.3x slower than the latest spec. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/old-flexbox)."
+    },
+    "no-websql": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "",
+      "name": "no-websql",
+      "category": "Offline",
+      "description": "Avoids WebSQL DB",
+      "helpText": "Web SQL is deprecated. Consider using IndexedDB instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/web-sql)."
+    },
+    "notification-on-start": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
+      "name": "notification-on-start",
+      "category": "UX",
+      "description": "Avoids requesting the notification permission on page load",
+      "helpText": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/notifications-on-load)."
+    },
+    "script-blocking-first-paint": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "url": "URL",
+            "totalKb": "Size (KB)",
+            "totalMs": "Delayed Paint By (ms)"
+          }
+        }
+      },
+      "name": "script-blocking-first-paint",
+      "category": "Performance",
+      "description": "Avoids `<script>` in head that delay first paint",
+      "helpText": "Script elements are blocking the first paint of your page. Consider inlining critical scripts and deferring non-critical ones. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
+    },
+    "uses-http2": {
+      "score": false,
+      "displayValue": "6 requests were not handled over h2",
+      "rawValue": false,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/"
+            },
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/style.css"
+            },
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/manifest.1a726734ac6ce3dfd56e.js"
+            },
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/bundle.c295a60f19bc15293fea.js"
+            },
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/vendor.7b4ec235dbbcae02b33e.js"
+            },
+            {
+              "protocol": "http/1.1",
+              "url": "https://salty-falls-54316.herokuapp.com/favicon.ico"
+            }
+          ],
+          "tableHeadings": {
+            "url": "URL",
+            "protocol": "Protocol"
+          }
+        }
+      },
+      "name": "uses-http2",
+      "category": "Performance",
+      "description": "Uses HTTP/2 for its own resources",
+      "helpText": "HTTP/2 offers many benefits over HTTP/1.1, including binary headers, multiplexing, and server push. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http2)."
+    },
+    "uses-optimized-images": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "preview": "",
+            "url": "URL",
+            "total": "Original (KB)",
+            "webpSavings": "WebP Savings (%)",
+            "jpegSavings": "JPEG Savings (%)"
+          }
+        }
+      },
+      "name": "uses-optimized-images",
+      "category": "Images",
+      "description": "Has optimized images",
+      "helpText": "Images should be optimized to save network bytes. The following images could have smaller file sizes when compressed with [WebP](https://developers.google.com/speed/webp/) or JPEG at 80 quality. [Learn more about image optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)."
+    },
+    "uses-responsive-images": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "preview": "",
+            "url": "URL",
+            "totalKb": "Original (KB)",
+            "potentialSavings": "Potential Savings (%)"
+          }
+        }
+      },
+      "name": "uses-responsive-images",
+      "category": "Images",
+      "description": "Has appropriately sized images",
+      "helpText": "Image sizes served should be based on the device display size to save network bytes. Learn more about [responsive images](https://developers.google.com/web/fundamentals/design-and-ui/media/images) and [client hints](https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints)."
+    },
+    "uses-passive-event-listeners": {
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
+      "debugString": "Lighthouse was unable to determine the URL of some script executions. It's possible a Chrome extension or other eval'd code is the source.",
+      "extendedInfo": {
+        "formatter": "table",
+        "value": {
+          "results": [],
+          "tableHeadings": {
+            "url": "URL",
+            "lineCol": "Line/Col",
+            "type": "Type",
+            "code": "Snippet"
+          }
+        }
+      },
+      "name": "uses-passive-event-listeners",
+      "category": "JavaScript",
+      "description": "Uses passive listeners to improve scrolling performance",
+      "helpText": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/passive-event-listeners)."
+    }
+  },
+  "runtimeConfig": {
+    "environment": [
+      {
+        "name": "Device Emulation",
+        "enabled": true,
+        "description": "Nexus 5X"
+      },
+      {
+        "name": "Network Throttling",
+        "enabled": true,
+        "description": "150ms RTT, 1.6Mbps down, 0.7Mbps up"
+      },
+      {
+        "name": "CPU Throttling",
+        "enabled": false,
+        "description": "5x slowdown"
+      }
+    ],
+    "blockedUrlPatterns": []
+  },
+  "aggregations": [
+    {
+      "name": "Progressive Web App",
+      "description": "These audits validate the aspects of a Progressive Web App.",
+      "scored": true,
+      "total": 0.93625,
+      "categorizable": true,
+      "score": [
+        {
+          "overall": 1,
+          "name": "App can load on offline/flaky connections",
+          "description": "Ensuring your web app can respond when the network connection is unavailable or flaky is critical to providing your users a good experience. This is achieved through use of a [Service Worker](https://developers.google.com/web/fundamentals/primers/service-worker/).",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "service-worker",
+              "category": "Offline",
+              "description": "Registers a Service Worker",
+              "helpText": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/registered-service-worker)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "works-offline",
+              "category": "Offline",
+              "description": "Responds with a 200 when offline",
+              "helpText": "If you're building a Progressive Web App, consider using a service worker so that your app can work offline. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http-200-when-offline)."
+            }
+          ]
+        },
+        {
+          "overall": 0.99,
+          "name": "Page load performance is fast",
+          "description": "Users notice if sites and apps don't perform well. These top-level metrics capture the most important perceived performance concerns.",
+          "subItems": [
+            {
+              "score": 99,
+              "displayValue": "1188.1ms",
+              "rawValue": 1188.1,
+              "optimalValue": "1,600ms",
+              "extendedInfo": {
+                "value": {
+                  "timestamps": {
+                    "navStart": 66264488264,
+                    "fCP": 66265676365,
+                    "fMP": 66265676372
+                  },
+                  "timings": {
+                    "navStart": 0,
+                    "fCP": 1188.101,
+                    "fMP": 1188.108
+                  }
+                },
+                "formatter": "null"
+              },
+              "name": "first-meaningful-paint",
+              "category": "Performance",
+              "description": "First meaningful paint",
+              "helpText": "First meaningful paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint)."
+            },
+            {
+              "score": 98,
+              "displayValue": "1205",
+              "rawValue": 1205,
+              "optimalValue": "1,250",
+              "extendedInfo": {
+                "formatter": "speedline",
+                "value": {
+                  "timings": {
+                    "firstVisualChange": 1204,
+                    "visuallyComplete": 1204,
+                    "speedIndex": 1204.914999999106,
+                    "perceptualSpeedIndex": 1204.914999999106
+                  },
+                  "timestamps": {
+                    "firstVisualChange": 66265682634,
+                    "visuallyComplete": 66265682634,
+                    "speedIndex": 66265683549,
+                    "perceptualSpeedIndex": 66265683549
+                  },
+                  "frames": [
+                    {
+                      "timestamp": 66264478.634,
+                      "progress": 29.58881964938648
+                    },
+                    {
+                      "timestamp": 66264798.623,
+                      "progress": 0
+                    },
+                    {
+                      "timestamp": 66264818.157,
+                      "progress": 0
+                    },
+                    {
+                      "timestamp": 66264861.939,
+                      "progress": 0
+                    },
+                    {
+                      "timestamp": 66265019.096,
+                      "progress": 29.58881964938648
+                    },
+                    {
+                      "timestamp": 66265683.549,
+                      "progress": 100.00000000000001
+                    }
+                  ]
+                }
+              },
+              "name": "speed-index-metric",
+              "category": "Performance",
+              "description": "Perceptual Speed Index",
+              "helpText": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/speed-index)."
+            },
+            {
+              "score": 100,
+              "displayValue": "33.1ms",
+              "rawValue": 33.1,
+              "optimalValue": "50ms",
+              "extendedInfo": {
+                "value": [
+                  {
+                    "percentile": 0.5,
+                    "time": 16
+                  },
+                  {
+                    "percentile": 0.75,
+                    "time": 16
+                  },
+                  {
+                    "percentile": 0.9,
+                    "time": 33.11135000009847
+                  },
+                  {
+                    "percentile": 0.99,
+                    "time": 100.7253700000199
+                  },
+                  {
+                    "percentile": 1,
+                    "time": 108.77400000000023
+                  }
+                ],
+                "formatter": "null"
+              },
+              "name": "estimated-input-latency",
+              "category": "Performance",
+              "description": "Estimated Input Latency",
+              "helpText": "The score above is an estimate of how long your app takes to respond to user input, in milliseconds. There is a 90% probability that a user encounters this amount of latency, or less. 10% of the time a user can expect additional latency. If your score is higher than Lighthouse's target score, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)."
+            },
+            {
+              "score": 99,
+              "displayValue": "1245.3ms",
+              "rawValue": 1245.3,
+              "optimalValue": "5,000ms",
+              "extendedInfo": {
+                "value": {
+                  "timings": {
+                    "fMP": 1188.1,
+                    "visuallyReady": 1195.285,
+                    "timeToInteractive": 1245.285
+                  },
+                  "timestamps": {
+                    "fMP": 66265676372,
+                    "visuallyReady": 66265683549,
+                    "timeToInteractive": 66265733549
+                  },
+                  "expectedLatencyAtTTI": 29.992,
+                  "foundLatencies": [
+                    {
+                      "estLatency": 58.77400000000006,
+                      "startTime": "1195.3"
+                    },
+                    {
+                      "estLatency": 29.991999995529625,
+                      "startTime": "1245.3"
+                    }
+                  ]
+                },
+                "formatter": "null"
+              },
+              "name": "time-to-interactive",
+              "category": "Performance",
+              "description": "Time To Interactive (alpha)",
+              "helpText": "Time to Interactive identifies the time at which your app appears to be ready enough to interact with. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/time-to-interactive)."
+            }
+          ]
+        },
+        {
+          "overall": 1,
+          "name": "Site is progressively enhanced",
+          "description": "Progressive enhancement means that everyone can access the basic content and functionality of a page in any browser, and those without certain browser features may receive a reduced but still functional experience.",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "without-javascript",
+              "category": "JavaScript",
+              "description": "Contains some content when JavaScript is not available",
+              "helpText": "Your app should display some content when JavaScript is disabled, even if it's just a warning to the user that JavaScript is required to use the app. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/no-js)."
+            }
+          ]
+        },
+        {
+          "overall": 0.5,
+          "name": "Network connection is secure",
+          "description": "Security is an important part of the web for both developers and users. Moving forward, Transport Layer Security (TLS) support will be required for many APIs.",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "is-on-https",
+              "category": "Security",
+              "description": "Uses HTTPS",
+              "helpText": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/https)."
+            },
+            {
+              "score": false,
+              "displayValue": "",
+              "rawValue": false,
+              "name": "redirects-http",
+              "category": "Security",
+              "description": "Redirects HTTP traffic to HTTPS",
+              "helpText": "If you've already set up HTTPS, make sure that you redirect all HTTP traffic to HTTPS. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http-redirects-to-https)."
+            }
+          ]
+        },
+        {
+          "overall": 1,
+          "name": "User can be prompted to Add to Homescreen",
+          "description": "While users can manually add your site to their homescreen in the browser menu, the [prompt (aka app install banner)](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android) will proactively prompt the user to install the app if the below requirements are met and the user has visited your site at least twice (with at least five minutes between visits).",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "service-worker",
+              "category": "Offline",
+              "description": "Registers a Service Worker",
+              "helpText": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/registered-service-worker)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-exists",
+              "category": "Manifest",
+              "description": "Manifest exists",
+              "helpText": "The web app manifest is the technology that enables users to add your web app to their homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-exists)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-start-url",
+              "category": "Manifest",
+              "description": "Manifest contains `start_url`",
+              "helpText": "Add a `start_url` to instruct the browser to launch a specific URL whenever your app is launched from a homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-start_url)."
+            },
+            {
+              "score": true,
+              "displayValue": "found sizes: 144x144, 192x192",
+              "rawValue": true,
+              "name": "manifest-icons-min-144",
+              "category": "Manifest",
+              "description": "Manifest contains icons at least 144px"
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-short-name",
+              "category": "Manifest",
+              "description": "Manifest contains `short_name`",
+              "helpText": "The `short_name` property is a requirement for Add To Homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-short_name)."
+            }
+          ]
+        },
+        {
+          "overall": 1,
+          "name": "Installed web app will launch with custom splash screen",
+          "description": "A default splash screen will be constructed, but meeting these requirements guarantee a high-quality and customizable [splash screen](https://developers.google.com/web/updates/2015/10/splashscreen) the user sees between tapping the home screen icon and your app's first paint.",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-exists",
+              "category": "Manifest",
+              "description": "Manifest exists",
+              "helpText": "The web app manifest is the technology that enables users to add your web app to their homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-exists)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-name",
+              "category": "Manifest",
+              "description": "Manifest contains `name`",
+              "helpText": "The `name` property identifies your app and is required. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-name)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "value": "#6799FF",
+                "formatter": "null"
+              },
+              "name": "manifest-background-color",
+              "category": "Manifest",
+              "description": "Manifest contains `background_color`",
+              "helpText": "When your app launches from a user's homescreen, the browser uses `background_color` to paint the background of the browser while your app loads for a smooth transition experience. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-background_color)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-theme-color",
+              "category": "Manifest",
+              "description": "Manifest contains `theme_color`",
+              "helpText": "Add a `theme_color` to set the color of the browser's address bar. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-theme_color)."
+            },
+            {
+              "score": true,
+              "displayValue": "found sizes: 192x192",
+              "rawValue": true,
+              "name": "manifest-icons-min-192",
+              "category": "Manifest",
+              "description": "Manifest contains icons at least 192px",
+              "helpText": "A 192px icon ensures that your app's icon displays well on the homescreens of the largest mobile devices. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-192px-icon)."
+            }
+          ]
+        },
+        {
+          "overall": 1,
+          "name": "Address bar matches brand colors",
+          "description": "The browser address bar can be themed to match your site. A `theme-color` [meta tag](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android) will upgrade the address bar when a user browses the site, and the [manifest theme-color](https://developers.google.com/web/updates/2015/08/using-manifest-to-set-sitewide-theme-color) will apply the same theme site-wide once it's been added to homescreen.",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-exists",
+              "category": "Manifest",
+              "description": "Manifest exists",
+              "helpText": "The web app manifest is the technology that enables users to add your web app to their homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-exists)."
+            },
+            {
+              "score": true,
+              "displayValue": "#6799FF",
+              "rawValue": true,
+              "name": "theme-color-meta",
+              "category": "HTML",
+              "description": "Has a `<meta name=\"theme-color\">` tag"
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "manifest-theme-color",
+              "category": "Manifest",
+              "description": "Manifest contains `theme_color`",
+              "helpText": "Add a `theme_color` to set the color of the browser's address bar. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-contains-theme_color)."
+            }
+          ]
+        },
+        {
+          "overall": 1,
+          "name": "Design is mobile-friendly",
+          "description": "Users increasingly experience your app on mobile devices, so it's important to ensure that the experience can adapt to smaller screens.",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "",
+              "name": "viewport",
+              "category": "Mobile Friendly",
+              "description": "Has a `<meta name=\"viewport\">` tag with `width` or `initial-scale`",
+              "helpText": "Add a viewport meta tag to optimize your app for mobile screens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/has-viewport-meta-tag)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "",
+              "name": "content-width",
+              "category": "Mobile Friendly",
+              "description": "Content is sized correctly for the viewport",
+              "helpText": "If the width of your app's content doesn't match the width of the viewport, your app might not be optimized for mobile screens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/content-sized-correctly-for-viewport)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Best Practices",
+      "description": "We've compiled some recommendations for modernizing your web app and avoiding performance pitfalls. These audits do not affect your score but are worth a look.",
+      "scored": false,
+      "total": null,
+      "categorizable": true,
+      "score": [
+        {
+          "overall": 0,
+          "name": "Using modern offline features",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "",
+              "name": "appcache-manifest",
+              "category": "Offline",
+              "description": "Avoids Application Cache",
+              "helpText": "Application Cache has been [deprecated](https://html.spec.whatwg.org/multipage/browsers.html#offline) by [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers). Consider implementing an offline solution using the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "",
+              "name": "no-websql",
+              "category": "Offline",
+              "description": "Avoids WebSQL DB",
+              "helpText": "Web SQL is deprecated. Consider using IndexedDB instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/web-sql)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Using modern protocols",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "name": "is-on-https",
+              "category": "Security",
+              "description": "Uses HTTPS",
+              "helpText": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/https)."
+            },
+            {
+              "score": false,
+              "displayValue": "6 requests were not handled over h2",
+              "rawValue": false,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/"
+                    },
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/style.css"
+                    },
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/manifest.1a726734ac6ce3dfd56e.js"
+                    },
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/bundle.c295a60f19bc15293fea.js"
+                    },
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/vendor.7b4ec235dbbcae02b33e.js"
+                    },
+                    {
+                      "protocol": "http/1.1",
+                      "url": "https://salty-falls-54316.herokuapp.com/favicon.ico"
+                    }
+                  ],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "protocol": "Protocol"
+                  }
+                }
+              },
+              "name": "uses-http2",
+              "category": "Performance",
+              "description": "Uses HTTP/2 for its own resources",
+              "helpText": "HTTP/2 offers many benefits over HTTP/1.1, including binary headers, multiplexing, and server push. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/http2)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Using bytes efficiently",
+          "subItems": [
+            {
+              "score": false,
+              "displayValue": "2KB (~10ms) potential savings",
+              "rawValue": false,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [
+                    {
+                      "url": "5.0.0/normalize.min.css",
+                      "numUnused": 36,
+                      "wastedBytes": 1027,
+                      "totalKb": "1 KB",
+                      "potentialSavings": "92%"
+                    },
+                    {
+                      "url": "/style.css",
+                      "numUnused": 9,
+                      "wastedBytes": 846,
+                      "totalKb": "1 KB",
+                      "potentialSavings": "90%"
+                    },
+                    {
+                      "url": "*inline*```.dvVfKS { \n  font-size: 1.5em;\n  text-align: center;\n  color: blue;\n} ...```",
+                      "numUnused": 1,
+                      "wastedBytes": 92,
+                      "totalKb": "0 KB",
+                      "potentialSavings": "25%"
+                    },
+                    {
+                      "url": "*inline*```/* Copyright 2014 Evernote Corporation. All rights reserved. */\n.en-markup-crop-options {\n  top: 18p... } ...```",
+                      "numUnused": 2,
+                      "wastedBytes": 128,
+                      "totalKb": "0 KB",
+                      "potentialSavings": "100%"
+                    }
+                  ],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "numUnused": "Unused Rules",
+                    "totalKb": "Original (KB)",
+                    "potentialSavings": "Potential Savings (%)"
+                  }
+                }
+              },
+              "name": "unused-css-rules",
+              "category": "CSS",
+              "description": "Uses 90% of its CSS rules",
+              "helpText": "Remove unused rules from stylesheets to reduce unnecessary bytes consumed by network activity. [Learn more](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery)"
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "preview": "",
+                    "url": "URL",
+                    "total": "Original (KB)",
+                    "webpSavings": "WebP Savings (%)",
+                    "jpegSavings": "JPEG Savings (%)"
+                  }
+                }
+              },
+              "name": "uses-optimized-images",
+              "category": "Images",
+              "description": "Has optimized images",
+              "helpText": "Images should be optimized to save network bytes. The following images could have smaller file sizes when compressed with [WebP](https://developers.google.com/speed/webp/) or JPEG at 80 quality. [Learn more about image optimization](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "preview": "",
+                    "url": "URL",
+                    "totalKb": "Original (KB)",
+                    "potentialSavings": "Potential Savings (%)"
+                  }
+                }
+              },
+              "name": "uses-responsive-images",
+              "category": "Images",
+              "description": "Has appropriately sized images",
+              "helpText": "Image sizes served should be based on the device display size to save network bytes. Learn more about [responsive images](https://developers.google.com/web/fundamentals/design-and-ui/media/images) and [client hints](https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Using modern CSS features",
+          "subItems": [
+            {
+              "score": false,
+              "displayValue": "",
+              "rawValue": false,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [
+                    {
+                      "url": "inline",
+                      "location": "2:23",
+                      "startLine": 10,
+                      "pre": ".clvuob {\n  display: -webkit-box;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:20",
+                      "startLine": 11,
+                      "pre": ".clvuob {\n  display: -moz-box;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:23",
+                      "startLine": 12,
+                      "pre": ".clvuob {\n  display: -ms-flexbox;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:23",
+                      "startLine": 29,
+                      "pre": ".jqznYz {\n  display: -webkit-box;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:20",
+                      "startLine": 30,
+                      "pre": ".jqznYz {\n  display: -moz-box;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:23",
+                      "startLine": 31,
+                      "pre": ".jqznYz {\n  display: -ms-flexbox;\n}"
+                    },
+                    {
+                      "url": "inline",
+                      "location": "2:31",
+                      "startLine": 44,
+                      "pre": ".jqznYz {\n  -webkit-box-orient: vertical;\n}"
+                    }
+                  ],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "startLine": "Line in the stylesheet / <style>",
+                    "location": "Column start/end",
+                    "pre": "Snippet"
+                  }
+                }
+              },
+              "name": "no-old-flexbox",
+              "category": "CSS",
+              "description": "Avoids old CSS flexbox",
+              "helpText": "The 2009 spec of Flexbox is deprecated and is 2.3x slower than the latest spec. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/old-flexbox)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Using modern JavaScript features",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "Lighthouse was unable to determine the URL of some script executions. It's possible a Chrome extension or other eval'd code is the source.",
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "lineCol": "Line/Col",
+                    "type": "Type",
+                    "code": "Snippet"
+                  }
+                }
+              },
+              "name": "uses-passive-event-listeners",
+              "category": "JavaScript",
+              "description": "Uses passive listeners to improve scrolling performance",
+              "helpText": "Consider marking your touch and wheel event listeners as `passive` to improve your page's scroll performance. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/passive-event-listeners)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "debugString": "Lighthouse was unable to determine the URL of some script executions. It's possible a Chrome extension or other eval'd code is the source.",
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "lineCol": "Line/Col",
+                    "type": "Event",
+                    "code": "Snippet"
+                  }
+                }
+              },
+              "name": "no-mutation-events",
+              "category": "JavaScript",
+              "description": "Avoids Mutation Events in its own scripts",
+              "helpText": "Mutation Events are deprecated and harm performance. Consider using Mutation Observers instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/mutation-events)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Avoiding APIs that harm the user experience",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
+              "name": "no-document-write",
+              "category": "Performance",
+              "description": "Avoids `document.write()`",
+              "helpText": "For users on slow connections, external scripts dynamically injected via `document.write()` can delay page load by tens of seconds. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/document-write)."
+            },
+            {
+              "score": false,
+              "displayValue": "2 resources delayed first paint by 159ms",
+              "rawValue": false,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [
+                    {
+                      "url": "5.0.0/normalize.min.css",
+                      "totalKb": "1 KB",
+                      "totalMs": "159ms"
+                    },
+                    {
+                      "url": "/style.css",
+                      "totalKb": "0 KB",
+                      "totalMs": "5ms"
+                    }
+                  ],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "totalKb": "Size (KB)",
+                    "totalMs": "Delayed Paint By (ms)"
+                  }
+                }
+              },
+              "name": "link-blocking-first-paint",
+              "category": "Performance",
+              "description": "Avoids `<link>` that delay first paint",
+              "helpText": "Link elements are blocking the first paint of your page. Consider inlining critical links and deferring non-critical ones. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "totalKb": "Size (KB)",
+                    "totalMs": "Delayed Paint By (ms)"
+                  }
+                }
+              },
+              "name": "script-blocking-first-paint",
+              "category": "Performance",
+              "description": "Avoids `<script>` in head that delay first paint",
+              "helpText": "Script elements are blocking the first paint of your page. Consider inlining critical scripts and deferring non-critical ones. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
+              "name": "external-anchors-use-rel-noopener",
+              "category": "Performance",
+              "description": "Opens external anchors using rel=\"noopener\"",
+              "helpText": "Open new tabs using `rel=\"noopener\"` to improve performance and prevent security vulnerabilities. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/noopener)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
+              "name": "geolocation-on-start",
+              "category": "UX",
+              "description": "Avoids requesting the geolocation permission on page load",
+              "helpText": "Users are mistrustful of or confused by sites that request their location without context. Consider tying the request to user gestures instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/geolocation-on-load)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
+              "name": "notification-on-start",
+              "category": "UX",
+              "description": "Avoids requesting the notification permission on page load",
+              "helpText": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/notifications-on-load)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Avoiding deprecated APIs and browser interventions",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
+              "name": "deprecations",
+              "category": "Deprecations",
+              "description": "Avoids deprecated APIs",
+              "helpText": "We found some uses of deprecated APIs. Please consider migrating to a newer option. [Learn more](https://www.chromestatus.com/features#deprecated)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Accessibility",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "aria-allowed-attr",
+              "category": "Accessibility",
+              "description": "Element aria-* attributes are allowed for this role",
+              "helpText": "Each ARIA `role` supports a specific subset of `aria-*` attributes. Mismatching these invalidates the `aria-*` attributes. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/aria-allowed-attributes)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "aria-required-attr",
+              "category": "Accessibility",
+              "description": "Elements with ARIA roles have the required aria-* attributes",
+              "helpText": "Some ARIA roles have required attributes that describe the state of the element to screen readers. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/required-aria-attributes)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "aria-valid-attr",
+              "category": "Accessibility",
+              "description": "Element aria-* attributes are valid and not misspelled or non-existent.",
+              "helpText": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid names. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/valid-aria-attributes)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "aria-valid-attr-value",
+              "category": "Accessibility",
+              "description": "Element aria-* attributes have valid values",
+              "helpText": "Assistive technologies, like screen readers, can't interpret ARIA attributes with invalid values. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/valid-aria-values)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "color-contrast",
+              "category": "Accessibility",
+              "description": "Background and foreground colors have a sufficient contrast ratio",
+              "helpText": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/contrast-ratio)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "image-alt",
+              "category": "Accessibility",
+              "description": "Every image element has an alt attribute",
+              "helpText": "Screen reader users rely on `alt` text to provide descriptions of images. It's also used as fallback content when an image fails to load. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/alt-attribute)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "label",
+              "category": "Accessibility",
+              "description": "Every form element has a label",
+              "helpText": "Labels ensure that form controls are announced properly by assistive technologies, like screen readers. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/form-labels)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "accessibility"
+              },
+              "name": "tabindex",
+              "category": "Accessibility",
+              "description": "No element has a `tabindex` attribute greater than 0",
+              "helpText": "A value greater than 0 implies an explicit navigation ordering. Although technically valid, this often creates frustrating experiences for users who rely on assistive technologies. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/tabindex)."
+            }
+          ]
+        },
+        {
+          "overall": 0,
+          "name": "Other",
+          "subItems": [
+            {
+              "score": false,
+              "displayValue": "",
+              "rawValue": false,
+              "debugString": "12 chars is the suggested maximum homescreen label length (Found: 17 chars).",
+              "name": "manifest-short-name-length",
+              "category": "Manifest",
+              "description": "Manifest's `short_name` won't be truncated when displayed on homescreen",
+              "helpText": "Make your app's `short_name` less than 12 characters to ensure that it's not truncated on homescreens. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-short_name-is-not-truncated)."
+            },
+            {
+              "score": true,
+              "displayValue": "standalone",
+              "rawValue": true,
+              "name": "manifest-display",
+              "category": "Manifest",
+              "description": "Manifest's `display` property is set",
+              "helpText": "Set the `display` property to specify how your app launches from the homescreen. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/manifest-has-display-set)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Performance Metrics",
+      "description": "These encapsulate your app's performance.",
+      "scored": false,
+      "total": null,
+      "categorizable": false,
+      "score": [
+        {
+          "overall": 0,
+          "subItems": [
+            {
+              "score": false,
+              "displayValue": "5",
+              "rawValue": false,
+              "optimalValue": 0,
+              "extendedInfo": {
+                "formatter": "criticalRequestChains",
+                "value": {
+                  "29189.138": {
+                    "request": {
+                      "url": "https://salty-falls-54316.herokuapp.com/",
+                      "startTime": 66264.491322,
+                      "endTime": 66264.648474,
+                      "responseReceivedTime": 66264.645901,
+                      "transferSize": 951
+                    },
+                    "children": {
+                      "29189.140": {
+                        "request": {
+                          "url": "https://salty-falls-54316.herokuapp.com/style.css",
+                          "startTime": 66264.653552,
+                          "endTime": 66264.819632,
+                          "responseReceivedTime": 66264.817941,
+                          "transferSize": 940
+                        },
+                        "children": {}
+                      },
+                      "29189.141": {
+                        "request": {
+                          "url": "https://salty-falls-54316.herokuapp.com/manifest.1a726734ac6ce3dfd56e.js",
+                          "startTime": 66264.653888,
+                          "endTime": 66264.826471,
+                          "responseReceivedTime": 66264.824785,
+                          "transferSize": 1277
+                        },
+                        "children": {}
+                      },
+                      "29189.139": {
+                        "request": {
+                          "url": "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css",
+                          "startTime": 66264.653112,
+                          "endTime": 66264.834757,
+                          "responseReceivedTime": 66264.832056,
+                          "transferSize": 1113
+                        },
+                        "children": {}
+                      },
+                      "29189.143": {
+                        "request": {
+                          "url": "https://salty-falls-54316.herokuapp.com/bundle.c295a60f19bc15293fea.js",
+                          "startTime": 66264.654609,
+                          "endTime": 66265.219238,
+                          "responseReceivedTime": 66264.846248,
+                          "transferSize": 39114
+                        },
+                        "children": {}
+                      },
+                      "29189.142": {
+                        "request": {
+                          "url": "https://salty-falls-54316.herokuapp.com/vendor.7b4ec235dbbcae02b33e.js",
+                          "startTime": 66264.654185,
+                          "endTime": 66265.456176,
+                          "responseReceivedTime": 66264.83907,
+                          "transferSize": 90022
+                        },
+                        "children": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "name": "critical-request-chains",
+              "category": "Performance",
+              "description": "Critical Request Chains",
+              "helpText": "The Critical Request Chains below show you what resources are required for first render of this page. Improve page load by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/critical-request-chains)."
+            },
+            {
+              "score": true,
+              "displayValue": "0",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "userTimings",
+                "value": []
+              },
+              "name": "user-timings",
+              "category": "Performance",
+              "description": "User Timing marks and measures",
+              "helpText": "Consider instrumenting your app with the User Timing API to create custom, real-world measurements of key user experiences. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/user-timing)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fancier stuff",
+      "description": "A list of newer features that you could be using in your app. These audits do not affect your score and are just suggestions.",
+      "scored": false,
+      "total": null,
+      "categorizable": true,
+      "score": [
+        {
+          "overall": 0,
+          "name": "New JavaScript features",
+          "subItems": [
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "lineCol": "Line/Col",
+                    "isEval": "Eval'd?"
+                  }
+                }
+              },
+              "name": "no-datenow",
+              "category": "JavaScript",
+              "description": "Avoids `Date.now()` in its own scripts",
+              "helpText": "Consider using `performance.now()` from the User Timing API instead. It provides high-precision timestamps, independent of the system clock. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/date-now)."
+            },
+            {
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "table",
+                "value": {
+                  "results": [],
+                  "tableHeadings": {
+                    "url": "URL",
+                    "lineCol": "Line/Col",
+                    "isEval": "Eval'd?"
+                  }
+                }
+              },
+              "name": "no-console-time",
+              "category": "JavaScript",
+              "description": "Avoids `console.time()` in its own scripts",
+              "helpText": "Consider using `performance.mark()` and `performance.measure()` from the User Timing API instead. They provide high-precision timestamps, independent of the system clock, and are integrated in the Chrome DevTools Timeline. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/console-time)."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
