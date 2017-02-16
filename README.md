@@ -138,6 +138,8 @@ now secret add mongodb <urlinkhere>
 
 Inside the `packages.json` I have alias this is for change the name from now.
 
+Just run `yarn deploy` or `npm run deploy`
+
 ## TODO
 
 - [x] Change webpack code splitting System.import for import()
