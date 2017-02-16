@@ -18,6 +18,10 @@ JSON test if you want to see https://github.com/EQuimper/thinkful-workshop-react
 
 The test link https://googlechrome.github.io/lighthouse/viewer/?gist=7dd020230f1ee2d1e03bcf8abbc23196
 
+## Theme Color on Chrome for Android
+
+![](http://i.imgur.com/22FS2Y4.png)
+
 ## Code splitting with React-Router
 
 ```js
