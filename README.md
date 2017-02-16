@@ -14,6 +14,8 @@
 
 ![](http://i.imgur.com/9Y4UYJF.png)
 
+JSON test if you want to see https://github.com/EQuimper/thinkful-workshop-react-redux-node-mongodb-webpack2/blob/master/PWA-test.json
+
 ## Code splitting with React-Router
 
 ```js
