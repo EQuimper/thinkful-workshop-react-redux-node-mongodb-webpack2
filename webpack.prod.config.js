@@ -6,6 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const autoprefixer = require('autoprefixer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect',
@@ -54,7 +55,7 @@ module.exports = {
       },
       {
         test: /manifest.json$/,
-        loader: 'file?name=manifest.json'
+        loader: 'file-loader?name=manifest.json'
       }
     ]
   },
@@ -81,6 +82,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
+    new CopyWebpackPlugin([
+      { from: './src/manifest.json', to: 'manifest.json' }
+    ]),
     new ExtractTextPlugin('styles.css'),
     new SWPrecacheWebpackPlugin({
       staticFileGlobs: [
