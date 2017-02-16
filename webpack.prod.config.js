@@ -9,7 +9,7 @@ const autoprefixer = require('autoprefixer');
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect',
-  'axios', 'normalize.css'
+  'axios', 'react-router'
 ];
 
 module.exports = {
