@@ -12,7 +12,7 @@
 
 ## PWA TEST
 
-![](http://i.imgur.com/xe18lc6.png)
+![](http://i.imgur.com/9Y4UYJF.png)
 
 ## Code splitting with React-Router
 
