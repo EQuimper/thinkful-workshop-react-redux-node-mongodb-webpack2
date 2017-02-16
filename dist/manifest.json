@@ -1,8 +1,7 @@
 {
-  "short_name": "Thinkful Workshop",
+  "short_name": "ThinkfulWor",
   "version": "1.0.0",
   "name": "Thinkful Workshop",
-  "version": "1.0.0",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/",
