@@ -65,7 +65,12 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
-      debug: false
+      debug: false,
+      options: {
+        postcss: [
+          autoprefixer()
+        ]
+      }
     }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
@@ -74,13 +79,6 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          autoprefixer()
-        ]
-      }
     }),
     new ExtractTextPlugin('style.css'),
     new SWPrecacheWebpackPlugin({
