@@ -1,5 +1,6 @@
 {
   "short_name": "Thinkful Workshop",
+  "version": "1.0.0",
   "name": "Thinkful Workshop",
   "display": "standalone",
   "orientation": "portrait",
