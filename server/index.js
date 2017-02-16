@@ -1,8 +1,6 @@
 /** @flow */
 import express, { type $Request, type $Response, type $Application } from 'express';
 import { join } from 'path';
-import http2 from 'spdy';
-import fs from 'fs';
 import { dbConfig, middlewaresConfig } from './config';
 import { PostRoutes } from './modules';
 
@@ -36,14 +34,7 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-const options = {
-  key: fs.readFileSync(__dirname + '/config/server.key'),
-  cert: fs.readFileSync(__dirname + '/config/server.crt')
-};
-
-http2
-  .createServer(options, app)
-  .listen(PORT, err => {
+app.listen(PORT, err => {
   if (err) { return console.error(err); }
 
   console.log(`App running to port: ${PORT}`);
