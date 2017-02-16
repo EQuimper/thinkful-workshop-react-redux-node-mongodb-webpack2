@@ -20,7 +20,7 @@ The test link https://googlechrome.github.io/lighthouse/viewer/?gist=7dd020230f1
 
 ## Theme Color on Chrome for Android
 
-![](http://i.imgur.com/22FS2Y4.png)
+![](http://i.imgur.com/22FS2Y4l.png)
 
 ## Code splitting with React-Router
 
