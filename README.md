@@ -16,6 +16,8 @@
 
 JSON test if you want to see https://github.com/EQuimper/thinkful-workshop-react-redux-node-mongodb-webpack2/blob/master/PWA-test.json
 
+The test link https://googlechrome.github.io/lighthouse/viewer/?gist=7dd020230f1ee2d1e03bcf8abbc23196
+
 ## Code splitting with React-Router
 
 ```js
