@@ -10,6 +10,10 @@
 - Service-Worker
 - App Caching
 
+## PWA TEST
+
+![](http://i.imgur.com/V1Spbw2.png)
+
 ## Code splitting with React-Router
 
 ```js
