@@ -9,7 +9,7 @@ import { getFetchSinglePost } from './actions';
 import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
 import SinglePostSelector from './single_post_selector';
-import { type Post } from '../../types/Data';
+import type { Post } from '../../types/Data';
 
 type Props = {
   post: Array<Post>,

@@ -7,13 +7,14 @@ import Root from './Root';
 import store from './redux/store';
 import './styles/styles.css';
 
-(() => {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
-  }
-})();
-
-require('offline-plugin/runtime').install();
+if (process.env.NODE_ENV === 'production') {
+  (() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  })();
+  require('offline-plugin/runtime').install();
+}
 
 const renderApp = Component => {
   render(
