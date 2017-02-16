@@ -128,6 +128,16 @@ https://thinkful-workshop-webpack2-node-react.now.sh/
 
 When install new packages just run `flow-typed install`
 
+## Deploy
+
+For deploy I'm using [Now from Zeit](https://zeit.co/now) Who provided free hosting with HTTP2. I'm using a variables for the mongodb hosting. For set yours just
+
+```
+now secret add mongodb <urlinkhere>
+``
+
+Inside the `packages.json` I have alias this is for change the name from now.
+
 ## TODO
 
 - [x] Change webpack code splitting System.import for import()
