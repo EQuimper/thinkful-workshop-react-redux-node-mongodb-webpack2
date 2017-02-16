@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
+const autoprefixer = require('autoprefixer');
 
 const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect',
@@ -36,7 +37,7 @@ module.exports = {
       },
       {
         loader: ExtractTextPlugin.extract({
-          loader: 'css-loader'
+          loader: ['css-loader', 'postcss-loader']
         }),
         test: /\.css$/
       },
@@ -73,6 +74,13 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          autoprefixer()
+        ]
+      }
     }),
     new ExtractTextPlugin('style.css'),
     new SWPrecacheWebpackPlugin({
