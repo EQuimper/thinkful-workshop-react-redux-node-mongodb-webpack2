@@ -49,10 +49,6 @@ module.exports = {
           },
           'image-webpack-loader' // first one append
         ]
-      },
-      {
-        test: /manifest.json$/,
-        loader: 'file?name=manifest.json'
       }
     ]
   },
