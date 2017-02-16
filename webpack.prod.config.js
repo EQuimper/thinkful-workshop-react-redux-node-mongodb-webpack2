@@ -81,7 +81,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('styles.css'),
     new SWPrecacheWebpackPlugin({
       staticFileGlobs: [
       'client/styles.css',
