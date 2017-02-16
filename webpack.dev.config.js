@@ -4,7 +4,7 @@ const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const VENDOR_LIBS: Array<string> = [
+const VENDOR_LIBS = [
   'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect',
   'axios'
 ];
