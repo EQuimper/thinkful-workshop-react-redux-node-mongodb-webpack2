@@ -41,6 +41,7 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "reselect": "^2.5.4",
+    "spdy": "^3.4.4",
     "styled-components": "^1.4.1",
     "validator": "^6.2.1"
   },

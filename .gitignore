@@ -3,3 +3,6 @@ node_modules/
 coverage/
 .env
 .dist/
+server/config/server.crt
+server/config/server.csr
+server/config/server.key
