@@ -8,6 +8,15 @@ body {
   text-align: center;
 }
 
+.card-list {
+  list-style: none;
+  padding: 30px 0;
+}
+
+.card-text {
+  width: 90%;
+}
+
 .sk-folding-cube {
   margin: 40px auto;
   width: 40px;
