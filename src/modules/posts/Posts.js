@@ -7,8 +7,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
 import Card from '../../components/Card';
-import LoadingScreen from '../../components/LoadingScreen';
 import Button from '../../components/Button';
+import LoadingScreen from '../../components/LoadingScreen';
 import { getFetchAllPosts, selectPost } from './actions';
 import { type Post } from '../../types/Data';
 
@@ -60,10 +60,17 @@ class Posts extends Component<void, Props, State> {
     return (
       <div>
         {this.props.posts.map((post: Post, i: number) => (
-          <li key={i} onClick={() => this._onClick(post._id)}>
+          <li className="card-list" key={i}>
             <Card>
               <h1>{post.title}</h1>
-              <p>{post.text}</p>
+              <div className="card-text">
+                <p>{post.text}</p>
+              </div>
+              <div>
+                <Button onClick={() => this._onClick(post._id)}>
+                  See post
+                </Button>
+              </div>
             </Card>
             <br />
           </li>

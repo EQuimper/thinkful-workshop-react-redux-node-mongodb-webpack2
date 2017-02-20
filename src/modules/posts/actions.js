@@ -39,6 +39,9 @@ const fetchPostError = (): Action => ({
   type: FETCH_SINGLE_POST_ERROR
 });
 
+/**
+ * Fetch a single Post with id
+ */
 export const getFetchSinglePost = (id: string) => async (dispatch: Dispatch) => {
   const { post }: { post: Post } = await postApi.fetchSinglePost(id);
   if (!post) {

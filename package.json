@@ -1,6 +1,6 @@
 {
   "name": "thinkful-workshop-full-stack-webpack2",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Thinkful workshop for help student work with a full stack project",
   "main": "index.js",
   "author": "EQuimper <quimperemanuel@gmail.com>",
