@@ -8,7 +8,6 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default (app: $Application) => {
   if (isProd) {
-    console.log('hello');
     app.use(compression());
   }
   app.use(bodyParser.json());
