@@ -4,8 +4,8 @@ import * as PostController from './controller';
 
 const routes: Router = new Router();
 
-routes.route('/posts').post(PostController.createPost);
-routes.route('/posts').get(PostController.fetchPosts);
-routes.route('/posts/:id').get(PostController.fetchPostById);
+routes.post('/posts', PostController.createPost);
+routes.get('/posts', PostController.fetchPosts);
+routes.get('/posts/:id', PostController.fetchPostById);
 
 export default routes;
