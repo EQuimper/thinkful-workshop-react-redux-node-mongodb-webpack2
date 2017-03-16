@@ -12,7 +12,7 @@ import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
 
 import { getFetchAllPosts, selectPost } from './actions';
-import { type Post } from '../../types/Data';
+import type { Post } from '../../types/Data';
 
 type Props = {
   posts: Array<Post>;
