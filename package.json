@@ -55,7 +55,7 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
-    "eslint-config-equimper": "^1.3.3",
+    "eslint-config-equimper": "^1.4.0",
     "extract-text-webpack-plugin": "2",
     "file-loader": "^0.10.0",
     "flow-bin": "^0.39.0",

@@ -1,11 +1,3 @@
 {
-  "extends": "equimper",
-  "rules": {
-    "react/sort-comp": 0,
-    "no-duplicate-imports": 0
-  },
-  "globals": {
-    "beforeEach": false,
-    "afterEach": false
-  }
+  "extends": "equimper"
 }

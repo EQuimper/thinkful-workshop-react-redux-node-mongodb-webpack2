@@ -1,6 +1,7 @@
 /** @flow */
 import React from 'react';
 import { Router, browserHistory } from 'react-router';
+
 import App from './layout/App';
 
 const errorLoading = (err: Object): void =>
