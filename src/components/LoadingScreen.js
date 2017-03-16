@@ -1,5 +1,6 @@
 /** @flow */
 import React from 'react';
+
 import ContainerFluidCenter from './ContainerFluidCenter';
 
 const LoadingScreen = () => (
