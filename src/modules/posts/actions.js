@@ -18,7 +18,9 @@ const fetchAllPosts = (posts: Array<Post>): Action => ({
   type: FETCH_ALL_POSTS,
   posts
 });
-
+/**
+ * Dispatch the fetch allPost afte the fetchPost promise call
+ */
 export const getFetchAllPosts = () => async (dispatch: Dispatch) => {
   const { posts }: { posts: Array<Post> } = await postApi.fetchPosts();
   return dispatch(fetchAllPosts(posts));

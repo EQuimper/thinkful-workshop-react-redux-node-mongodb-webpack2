@@ -1,31 +1,37 @@
 /** @flow */
 /**
  * Show a single post who maybe came from the selector or from a server request.
+ * If the post have been fetch from the /posts we show this one.
+ * If the post didn't get fetch from the /posts we make
+ * an api request for fetching the data of this one.
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { getFetchSinglePost } from './actions';
+
 import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
-import SinglePostSelector from './single_post_selector';
+
 import type { Post } from '../../types/Data';
 
+import SinglePostSelector from './single_post_selector';
+import { getFetchSinglePost } from './actions';
+
 type Props = {
-  post: Array<Post>,
+  post: Array<Post>;
   postDomains: {
-    post: Post
+    post: Post;
   },
-  getFetchSinglePost: (id: string) => void,
+  getFetchSinglePost: (id: string) => void;
   params: {
-    id: string
+    id: string;
   }
 }
 
 type State = {
-  loading: boolean,
-  error: boolean,
-  post: ?Post
+  loading: boolean;
+  error: boolean;
+  post: ?Post;
 }
 
 @connect(
