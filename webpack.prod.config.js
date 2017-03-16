@@ -81,7 +81,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: './src/manifest.json', to: 'manifest.json' }
     ]),
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('[name].[chunkhash].css'),
     new SWPrecacheWebpackPlugin({
       staticFileGlobs: [
       'client/styles.css',

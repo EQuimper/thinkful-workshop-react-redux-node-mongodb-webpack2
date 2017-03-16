@@ -9,10 +9,10 @@ import { type Action } from '../../types/Action';
 import { type Post } from '../../types/Data';
 
 type State = {
-  posts: ?Array<Post>,
-  post: ?Post,
-  selectPostId: ?string,
-  error: boolean
+  posts: ?Array<Post>;
+  post: ?Post;
+  selectPostId: ?string;
+  error: boolean;
 }
 
 const INITIAL_STATE = {

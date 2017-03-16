@@ -6,20 +6,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+
 import Card from '../../components/Card';
 import Button from '../../components/Button';
 import LoadingScreen from '../../components/LoadingScreen';
+
 import { getFetchAllPosts, selectPost } from './actions';
 import { type Post } from '../../types/Data';
 
 type Props = {
-  posts: Array<Post>,
-  getFetchAllPosts: () => Promise<void>,
-  selectPost: (id: string) => string
+  posts: Array<Post>;
+  getFetchAllPosts: () => Promise<void>;
+  selectPost: (id: string) => string;
 }
 
 type State = {
-  loading: boolean
+  loading: boolean;
 }
 
 @connect(
@@ -29,7 +31,7 @@ type State = {
   { getFetchAllPosts, selectPost }
 )
 class Posts extends Component<void, Props, State> {
-  state = { loading: true }
+  state = { loading: false }
 
   componentDidMount() {
     (async () => {
