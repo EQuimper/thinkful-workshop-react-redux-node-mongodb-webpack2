@@ -58,7 +58,7 @@
     "eslint-config-equimper": "^1.4.0",
     "extract-text-webpack-plugin": "2",
     "file-loader": "^0.10.0",
-    "flow-bin": "^0.39.0",
+    "flow-bin": "^0.42.0",
     "flow-typed": "^2.0.0",
     "html-webpack-plugin": "^2.28.0",
     "image-webpack-loader": "^3.2.0",
