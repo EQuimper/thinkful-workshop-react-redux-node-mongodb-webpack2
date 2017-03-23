@@ -14,7 +14,7 @@ export const SELECTED_POST = 'SELECTED_POST';
 /**
  * FETCH ALL POSTS
  */
-const fetchAllPosts = (posts: Array<Post>): Action => ({
+export const fetchAllPosts = (posts: Array<Post>): Action => ({
   type: FETCH_ALL_POSTS,
   posts
 });
@@ -29,7 +29,7 @@ export const getFetchAllPosts = () => async (dispatch: Dispatch) => {
 /**
  * FETCH SINGLE POST WITH HIS ID
  */
-const fetchPost = (post: Post): Action => ({
+export const fetchPost = (post: Post): Action => ({
   type: FETCH_SINGLE_POST,
   post
 });
@@ -37,7 +37,7 @@ const fetchPost = (post: Post): Action => ({
 /**
  * WHEN FETCH RECEIVE AN ERROR
  */
-const fetchPostError = (): Action => ({
+export const fetchPostError = (): Action => ({
   type: FETCH_SINGLE_POST_ERROR
 });
 
