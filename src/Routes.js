@@ -5,7 +5,7 @@ import { Router, browserHistory } from 'react-router';
 import App from './layout/App';
 
 const errorLoading = (err: Object): void =>
- console.error('Dynamic page loading failed', err);
+ console.error('Dynamic page loading failed', err); // eslint-disable-line
 
 const componentRoutes = {
   component: App,
@@ -20,7 +20,7 @@ const componentRoutes = {
         } catch (e) {
           errorLoading(e);
         }
-      }
+      },
     },
     {
       path: '/posts/:id',
@@ -31,9 +31,9 @@ const componentRoutes = {
         } catch (e) {
           errorLoading(e);
         }
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 export default () => (

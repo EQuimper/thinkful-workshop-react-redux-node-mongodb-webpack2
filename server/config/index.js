@@ -4,5 +4,5 @@ import middlewaresConfig from './middlewares';
 
 export {
   dbConfig,
-  middlewaresConfig
+  middlewaresConfig,
 };

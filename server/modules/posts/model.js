@@ -11,13 +11,13 @@ const PostSchema: PostType = new Schema({
     type: String,
     unique: true,
     minlength: [5, 'Title need to be at least 5 characters'],
-    required: true
+    required: true,
   },
   text: {
     type: String,
     minlength: [30, 'Title need to be at least 30 characters'],
-    required: true
-  }
+    required: true,
+  },
 });
 
 export default mongoose.model('Post', PostSchema);

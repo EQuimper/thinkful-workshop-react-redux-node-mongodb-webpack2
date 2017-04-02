@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import PostsReducer from '../modules/posts/reducer';
 
 const reducers = {
-  posts: PostsReducer
+  posts: PostsReducer,
 };
 
 export type Reducers = typeof reducers;

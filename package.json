@@ -13,7 +13,8 @@
     "clean": "rimraf dist",
     "dev:c": "cross-env NODE_ENV=development webpack-dev-server --colors --profile --config webpack.dev.config.js",
     "dev:s": "cross-env NODE_ENV=development nodemon index.js",
-    "alias": "thinkful-workshop-webpack2-node-react"
+    "alias": "thinkful-workshop-webpack2-node-react",
+    "lint": "eslint src server"
   },
   "dependencies": {
     "autoprefixer": "^6.7.7",

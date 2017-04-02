@@ -35,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.listen(PORT, err => {
-  if (err) { return console.error(err); }
+  if (err) { return console.error(err); } // eslint-disable-line
 
-  console.log(`App running to port: ${PORT}`);
+  console.log(`App running to port: ${PORT}`); // eslint-disable-line
 });

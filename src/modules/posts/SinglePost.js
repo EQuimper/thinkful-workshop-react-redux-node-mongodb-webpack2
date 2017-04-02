@@ -37,7 +37,7 @@ type State = {
 @connect(
   state => ({
     post: SinglePostSelector(state),
-    postDomains: state.posts
+    postDomains: state.posts,
   }),
   { getFetchSinglePost }
 )
@@ -45,7 +45,7 @@ class SinglePost extends Component<void, Props, State> {
   state = {
     loading: true,
     error: false,
-    post: null
+    post: null,
   }
 
   componentDidMount() {
