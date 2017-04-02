@@ -16,7 +16,7 @@ export const SELECTED_POST = 'SELECTED_POST';
  */
 export const fetchAllPosts = (posts: Array<Post>): Action => ({
   type: FETCH_ALL_POSTS,
-  posts
+  posts,
 });
 /**
  * Dispatch the fetch allPost afte the fetchPost promise call
@@ -31,14 +31,14 @@ export const getFetchAllPosts = () => async (dispatch: Dispatch) => {
  */
 export const fetchPost = (post: Post): Action => ({
   type: FETCH_SINGLE_POST,
-  post
+  post,
 });
 
 /**
  * WHEN FETCH RECEIVE AN ERROR
  */
 export const fetchPostError = (): Action => ({
-  type: FETCH_SINGLE_POST_ERROR
+  type: FETCH_SINGLE_POST_ERROR,
 });
 
 /**
@@ -57,5 +57,5 @@ export const getFetchSinglePost = (id: string) => async (dispatch: Dispatch) => 
  */
 export const selectPost = (id: string): Action => ({
   type: SELECTED_POST,
-  id
+  id,
 });

@@ -1,9 +1,6 @@
 import {
   FETCH_SINGLE_POST,
-  FETCH_ALL_POSTS,
-  FETCH_SINGLE_POST_ERROR,
-  getFetchSinglePost,
-  fetchPost
+  fetchPost,
 } from './actions';
 
 describe('Post Actions', () => {
@@ -12,7 +9,7 @@ describe('Post Actions', () => {
       const post = { title: 'Hello' };
       const expected = {
         type: FETCH_SINGLE_POST,
-        post
+        post,
       };
       expect(fetchPost(post)).toEqual(expected);
     });

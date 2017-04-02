@@ -26,7 +26,7 @@ type State = {
 
 @connect(
   state => ({
-    posts: state.posts.posts
+    posts: state.posts.posts,
   }),
   { getFetchAllPosts, selectPost }
 )
