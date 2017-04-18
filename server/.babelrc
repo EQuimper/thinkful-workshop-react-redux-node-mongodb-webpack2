@@ -1,7 +1,21 @@
 {
-  "presets": ["es2015", "stage-0"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": 7.9
+        }
+      }
+    ]
+  ],
   "plugins": [
-    "syntax-flow",
+    [
+      "transform-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
     "transform-flow-strip-types"
   ]
 }
