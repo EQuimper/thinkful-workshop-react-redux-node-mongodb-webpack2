@@ -14,12 +14,12 @@ const PostSchema = new _mongoose.Schema({
   title: {
     type: String,
     unique: true,
-    minlength: [5, 'Title need to be at least 5 characters'],
+    minLength: [5, 'Title need to be at least 5 characters'],
     required: true
   },
   text: {
     type: String,
-    minlength: [30, 'Title need to be at least 30 characters'],
+    minLength: [30, 'Title need to be at least 30 characters'],
     required: true
   }
 });
