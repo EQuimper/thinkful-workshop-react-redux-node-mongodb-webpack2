@@ -40,7 +40,7 @@ export const fetchPosts = async (req: $Request, res: $Response) => {
   try {
     return res.status(200).json({ error: false, posts: await Post.find({}) });
   } catch (e) {
-    return res.status(500).json({ error: false, message: 'Error server' });
+    return res.status(500).json({ error: true, message: 'Error server' });
   }
 };
 
@@ -51,6 +51,6 @@ export const fetchPostById = async (req: $Request, res: $Response) => {
   try {
     return res.status(200).json({ error: false, post: await Post.findById(req.params.id) });
   } catch (e) {
-    return res.status(500).json({ error: false, message: 'Error server' });
+    return res.status(500).json({ error: true, message: 'Error server' });
   }
 };
